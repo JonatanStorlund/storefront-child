@@ -1,0 +1,25 @@
+@font-face {
+	font-family: Roboto;
+	font-style: normal;
+  src: url(./fonts/RobotoCondensed-Regular.ttf);
+}
+
+ @font-face {
+	font-family: Teko;
+	font-style: normal;
+  src: url(./fonts/Teko-Regular.ttf);
+}
+
+
+body {
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Teko, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+}
