@@ -1,13 +1,13 @@
 @font-face {
 	font-family: Roboto;
 	font-style: normal;
-  src: url(./fonts/RobotoCondensed-Regular.ttf);
+  src: url(../fonts/RobotoCondensed-Regular.ttf);
 }
 
  @font-face {
 	font-family: Teko;
 	font-style: normal;
-  src: url(./fonts/Teko-Regular.ttf);
+  src: url(../fonts/Teko-Regular.ttf);
 }
 
 
