@@ -1,0 +1,51 @@
+/* SHOP PRODUCT CARDS*/
+.woocommerce .product {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  border-radius: 10px;
+}
+
+
+/* SHOP PRODUCT VARIATION STLES*/
+.variations_form.cart.swatches-support .variations tr {
+  display: flex;
+  flex-direction: column;
+}
+
+.variations_form.cart.swatches-support .variations .label {
+  text-align: center;
+}
+
+.variations_form.cart.swatches-support .variations .swatch-label {
+  border-radius: 0;
+  margin: 0;
+  width: 50%;
+  background: var(--blue);
+  color: var(--white);
+  filter: brightness(50%);
+}
+
+.variations_form.cart.swatches-support .variations .swatch-label.selected {
+  filter: brightness(100%);
+  border-radius: 0;
+  margin: 0;
+  width: 50%;
+}
+
+.woocommerce .product .woocommerce-variation-add-to-cart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.woocommerce .product .woocommerce-variation-add-to-cart .quantity {
+  width: 25%;
+}
+
+.woocommerce .product .woocommerce-variation-add-to-cart .submit {
+  width: 75%;
+}
+
+.woocommerce .product .woocommerce-variation-add-to-cart .wc-forward {
+  width: 100%;
+}
