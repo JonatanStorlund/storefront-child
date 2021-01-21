@@ -1,0 +1,39 @@
+.has-green-color {
+  color: var(--green);
+}
+
+.has-green-background-color {
+  background-color: var(--green);
+}
+
+.has-blue-color {
+  color: var(--blue);
+}
+
+.has-blue-background-color {
+  background-color: var(--blue);
+}
+
+.has-white-color {
+  color: var(--white);
+}
+
+.has-white-background-color {
+  background-color: var(--white);
+}
+
+.has-black-color {
+  color: var(--black);
+}
+
+.has-black-background-color {
+  background-color: var(--black);
+}
+
+.has-gray-color {
+  color: var(--gray);
+}
+
+.has-gray-background-color {
+  background-color: var(--gray);
+}

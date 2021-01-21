@@ -18,3 +18,35 @@ add_filter( 'locale_stylesheet_uri', 'chld_thm_cfg_locale_css' );
 $path = get_template_directory() . '-child/';
 
 include $path . 'woocommerce/shop.php';
+
+function add_custom_editor_colors() {
+    add_theme_support( 'editor-color-palette', array(
+        array(
+            'name' => __( 'Green', 'storefront-child' ),
+            'slug' => 'green',
+            'color' => '#399e5a',
+        ),
+        array(
+            'name' => __( 'Blue', 'storefront-child' ),
+            'slug' => 'blue',
+            'color' => '#224870',
+        ),
+        array(
+            'name' => __( 'White', 'storefront-child' ),
+            'slug' => 'white',
+            'color' => '#e7ecef',
+        ),
+        array(
+            'name' => __( 'Black', 'storefront-child' ),
+            'slug' => 'black',
+            'color' => '#333333',
+        ),
+        array(
+            'name' => __( 'Gray', 'storefront-child' ),
+            'slug' => 'gray',
+            'color' => '#6d6d6d',
+        ),
+    ) );
+}
+
+add_action( 'after_setup_theme', 'add_custom_editor_colors' );
