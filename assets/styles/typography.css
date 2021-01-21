@@ -12,7 +12,9 @@
 
 
 body {
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	padding-top: 88px;
+	font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 18px;
 }
 
 h1,
@@ -22,11 +24,11 @@ h4,
 h5,
 h6 {
 	font-family: Teko, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
-	letter-spacing: 0.8pt;
+	letter-spacing: 0.5pt;
 }
 
 h1 {
-	font-size: 64px;
+	font-size: 74px;
 }
 
 h2 {
@@ -51,23 +53,23 @@ h6 {
 
 @media screen and (max-width: 768px) {
 	h1 {
-		font-size: 64px;
+		font-size: 34px;
 	}
 
 	h2 {
-		font-size: 32px;
-	}
-
-	h3 {
 		font-size: 28px;
 	}
 
-	h4 {
+	h3 {
 		font-size: 24px;
 	}
 
-	h5 {
+	h4 {
 		font-size: 20px;
+	}
+
+	h5 {
+		font-size: 18px;
 	}
 
 	h6 {

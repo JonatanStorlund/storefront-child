@@ -1,14 +1,47 @@
-@media screen and (min-width: 768px) {
-  .site-header {
-    display: flex;
-  }
+.site-header {
+  margin-bottom: 0;
+  position: fixed;
+  top: 0;
+  transition: top .2s ease-in-out;
+  width: 100%;
+  z-index: 1000;
+}
+
+.admin-bar .site-header {
+  top: 32px;
+}
+
+.site-header.nav-up {
+  top: -116px;
+}
+
+.site-header .site-branding {
+  margin: 0;
 }
 
 .site-header .site-branding .custom-logo {
-  max-width: 80px;
+  max-width: 60px;
   height: auto;
+  padding: 0;
 }
 
 .site-header .site-search {
   display: none;
+}
+
+.entry-title {
+  margin-top: 30px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .site-header {
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .site-header .site-branding .custom-logo {
+    max-width: 80px;
+  }
 }
