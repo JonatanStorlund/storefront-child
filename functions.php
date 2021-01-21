@@ -19,6 +19,46 @@ $path = get_template_directory() . '-child/';
 
 include $path . 'woocommerce/shop.php';
 
+add_action( 'init', 'woa_add_hero_image_init' );
+
+function woa_add_hero_image_init () {
+
+   add_action( 'storefront_before_content', 'woa_add_hero_image', 5 );
+
+}
+
+function woa_add_hero_image() {
+
+   if ( is_front_page() ) :
+
+      ?>
+		<!-- hero banner -->
+		<?php if (get_field('hero_title')) { ?>
+		<a class="hero-link" href="<?php echo get_field('hero_link') ?>">
+			<div class="hero-wrapper desktop" style="background-image: url(<?php echo get_field('hero_image')['url']?>)">
+				<div class="hero-wrapper__left-box hero-wrapper__box desktop">
+					<div>
+						<h1 class="hero-wrapper__left-box-title"><?php echo get_field('hero_title') ?></h1>
+						<?php if(get_field('hero_link')) {?>
+						<button class="hero-wrapper__left-box-button"><?php echo pll__('Till menyn', 'sijomealprep') ?></button>
+						<?php } ?>
+					</div>
+				</div>
+			</div>
+        </a>
+
+        <div class="hero-wrapper section-inner medium mobile alignfull">
+            <h1 class="hero-wrapper__left-box-title"><?php echo get_field('hero_title') ?></h1>
+            <?php if(get_field('hero_link')) {?>
+            <button class="hero-wrapper__left-box-button"><?php echo pll__('Till menyn', 'sijomealprep') ?></button>
+        <?php } ?>
+        </div>
+		<?php
+        }
+   endif;
+
+}
+
 function add_custom_editor_colors() {
     add_theme_support( 'editor-color-palette', array(
         array(
@@ -50,3 +90,10 @@ function add_custom_editor_colors() {
 }
 
 add_action( 'after_setup_theme', 'add_custom_editor_colors' );
+
+function storefront_child_scripts() {
+    // wp_enqueue_script( 'storefront-child-scripts', get_stylesheet_directory_uri() . '/assets/scripts/main.js', array( 'jquery' ),'',true );
+    wp_enqueue_script( 'storefront-child-scripts', get_stylesheet_directory_uri() . '/assets/scripts/hide-show-on-scroll.js', array( 'jquery' ),'',true );
+}
+
+add_action( 'wp_enqueue_scripts', 'storefront_child_scripts' );

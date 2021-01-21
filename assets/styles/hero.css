@@ -1,0 +1,44 @@
+.hero-wrapper {
+  background-size: cover;
+  background-position: center center;
+  height: 75vh;
+  position: relative;
+}
+
+.hero-wrapper .hero-wrapper__left-box {
+  position: absolute;
+  top: 16.25vh;
+  left: 15%;
+  padding: 0 16px;
+}
+
+.hero-wrapper .hero-wrapper__left-box .hero-wrapper__left-box-title  {
+  text-shadow: 2px 2px 1px rgb(39 39 39);
+  color: var(--white);
+}
+
+.hero-wrapper.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-wrapper {
+    height: 45vh;
+  }
+
+  .hero-wrapper .hero-wrapper__left-box-title {
+    text-shadow: 2px 2px 1px rgb(39 39 39);
+    color: var(--white);
+  }
+
+  .hero-wrapper.mobile {
+    display: block;
+    height: auto;
+    background: var(--green);
+    padding: 16px;
+  }
+
+  .hero-wrapper .hero-wrapper__left-box {
+    display: none;
+  }
+}
