@@ -1,0 +1,16 @@
+#page .button,
+#page a.button,
+#page button {
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+  letter-spacing: 1.2pt;
+}
+
+
+@media screen and (max-width: 768px) {
+  .woocommerce .products .product .woocommerce-variation-add-to-cart .single_add_to_cart_button,
+  .product form.cart .single_add_to_cart_button {
+    font-size: 11px;
+    padding: 2px;
+    margin-bottom: 0;
+  }
+}
