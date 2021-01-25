@@ -15,6 +15,11 @@
   display: none;
 }
 
+.tawcvs-swatches .swatch {
+  height: 50px;
+  padding: 10px;
+}
+
 /* SHOP PRODUCT VARIATION STLES*/
 .variations_form.cart.swatches-support .variations {
   margin-bottom: 16px;
@@ -41,7 +46,7 @@
   border-radius: 0;
   margin: 0;
   width: 50%;
-  background: var(--blue);
+  background: var(--green);
   color: var(--white);
   filter: brightness(50%);
 }
@@ -79,4 +84,26 @@
 
 .woocommerce .products .product .woocommerce-variation-add-to-cart .wc-forward {
   width: 100%;
+}
+
+.macro-container {
+  display: flex;
+  background: var(--blue);
+  padding: 10px;
+}
+
+.macro-container .macro-container__box {
+  width: 50%;
+}
+
+.macro-container .macro-container__box .macro-container__box-title {
+  color: var(--white);
+}
+
+.macro-container .macro-container__box .macro-container__box-macro {
+  color: var(--white);
+}
+
+.product a:hover {
+  text-decoration: none;
 }
