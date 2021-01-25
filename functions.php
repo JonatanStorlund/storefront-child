@@ -18,6 +18,7 @@ add_filter( 'locale_stylesheet_uri', 'chld_thm_cfg_locale_css' );
 $path = get_template_directory() . '-child/';
 
 include $path . 'woocommerce/shop.php';
+include $path . 'woocommerce/single-product-filters.php';
 
 add_action( 'init', 'woa_add_hero_image_init' );
 
@@ -28,7 +29,6 @@ function woa_add_hero_image_init () {
 }
 
 function woa_add_hero_image() {
-
    if ( is_front_page() ) :
 
       ?>
@@ -91,8 +91,8 @@ function add_custom_editor_colors() {
 
 add_action( 'after_setup_theme', 'add_custom_editor_colors' );
 
+
 function storefront_child_scripts() {
-    // wp_enqueue_script( 'storefront-child-scripts', get_stylesheet_directory_uri() . '/assets/scripts/main.js', array( 'jquery' ),'',true );
     wp_enqueue_script( 'storefront-child-scripts', get_stylesheet_directory_uri() . '/assets/scripts/hide-show-on-scroll.js', array( 'jquery' ),'',true );
 }
 
