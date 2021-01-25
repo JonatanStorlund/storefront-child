@@ -1,0 +1,28 @@
+.footer-widgets {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
+}
+
+.footer-widgets block {
+  width: 49%;
+}
+
+.footer-widgets block:nth-child(odd) {
+  margin-right: 2%;
+}
+
+.site-info {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-widgets block {
+    width: 100%;
+  }
+
+  .footer-widgets block:nth-child(odd) {
+    margin-right: 0;
+  }
+}
