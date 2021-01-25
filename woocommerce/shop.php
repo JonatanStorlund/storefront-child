@@ -53,3 +53,39 @@ return '';
 // return regular price
 return $v_price;
 }
+
+add_filter( 'the_title', 'shorten_woo_product_title', 10, 2 );
+function shorten_woo_product_title( $title, $id ) {
+    if ( ! is_singular( array( 'product' ) ) && get_post_type( $id ) === 'product' ) {
+        return wp_trim_words( $title, 4, '...' ); // change last number to the number of words you want
+    } else {
+        return $title;
+    }
+}
+
+function winwar_add_product_excerpt_into_archive() {
+    global $product;
+    $smallKcal = get_field('small_portion_kcal', $product->ID);
+    $smallProtein = get_field('small_portion_protein', $product->ID);
+    $largeKcal = get_field('large_portion_kcal', $product->ID);
+    $largeProtein = get_field('large_portion_protein', $product->ID);
+
+      if ( $product->is_type( 'variable' ) ) {
+        echo '<div class="macro-container">';
+        echo '<div class="macro-container__box">';
+        echo '<h4 class="macro-container__box-title">Kcal</h4>';
+        echo '<div class="macro-container__box-container">';
+        echo '<h4 class="macro-container__box-macro">'. strstr($largeKcal, '.', true) . ' / ' . strstr($smallKcal, '.', true) .'</h4>';
+        echo '</div>';
+        echo '</div>';
+        echo '<div class="macro-container__box">';
+        echo '<h4 class="macro-container__box-title">Protein</h4>';
+        echo '<div class="macro-container__box-container">';
+        echo '<h4 class="macro-container__box-macro small-protein">'. strstr($largeProtein, '.', true) . ' / ' . strstr($smallProtein, '.', true) .'</h4>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+      }
+   }
+
+   add_action( 'woocommerce_after_shop_loop_item_title', 'winwar_add_product_excerpt_into_archive', 234 );
