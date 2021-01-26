@@ -1,3 +1,26 @@
 .woocommerce-variation-description {
   display: none;
 }
+
+.single-product .c-accordion__title {
+  background: var(--green);
+  color: var(--white);
+  padding: 10px;
+}
+
+.single-product .c-accordion__title:after {
+  color: inherit;
+  right: 10px;
+}
+
+.single-product .single_variation_wrap {
+  width: 100%;
+}
+
+.single-product .product_title {
+  text-align: left;
+}
+
+.single-product .woocommerce-variation-add-to-cart {
+  display: flex;
+}
