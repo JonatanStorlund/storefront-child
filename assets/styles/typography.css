@@ -31,12 +31,15 @@ h1 {
 	font-size: 74px;
 }
 
-h2 {
+h2,
+.product_title.entry-title {
 	font-size: 32px;
 }
 
 h3,
-ul.products li.product .woocommerce-loop-product__title {
+ul.products li.product .woocommerce-loop-product__title,
+.single-product .price,
+.postcode-checker-msg {
 	font-size: 28px;
 }
 
@@ -45,7 +48,8 @@ h4 {
 }
 
 h5,
-.tawcvs-swatches .swatch {
+.tawcvs-swatches .swatch,
+.single-product .c-accordion__title {
 	font-size: 20px;
 }
 
@@ -58,11 +62,14 @@ h6 {
 		font-size: 34px;
 	}
 
-	h2 {
+	h2,
+	.product_title.entry-title {
 		font-size: 28px;
 	}
 
-	h3 {
+	h3,
+	.single-product .price,
+	.postcode-checker-msg {
 		font-size: 24px;
 	}
 
@@ -71,7 +78,8 @@ h6 {
 		font-size: 20px;
 	}
 
-	h5 {
+	h5,
+	.single-product .c-accordion__title {
 		font-size: 18px;
 	}
 
