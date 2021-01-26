@@ -7,7 +7,7 @@ function add_variations_in_shop_page() {
 }
 
 add_action( 'wp', 'remove_default_sorting_storefront' );
-  
+
 function remove_default_sorting_storefront() {
    remove_action( 'woocommerce_after_shop_loop', 'woocommerce_catalog_ordering', 10 );
    remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 10 );
@@ -89,3 +89,10 @@ function winwar_add_product_excerpt_into_archive() {
    }
 
    add_action( 'woocommerce_after_shop_loop_item_title', 'winwar_add_product_excerpt_into_archive', 234 );
+
+   add_filter( 'storefront_handheld_footer_bar_links', 'jk_remove_handheld_footer_links' );
+        function jk_remove_handheld_footer_links( $links ) {
+            unset( $links['search'] );
+
+            return $links;
+    }
