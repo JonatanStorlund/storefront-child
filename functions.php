@@ -19,6 +19,9 @@ $path = get_template_directory() . '-child/';
 
 include $path . 'woocommerce/shop.php';
 include $path . 'woocommerce/single-product-filters.php';
+include $path . 'woocommerce/woocommerce-checkout.php';
+include $path . 'woocommerce/postcode-checker.php';
+include $path . 'woocommerce/polylangstrings.php';
 
 add_action( 'init', 'woa_add_hero_image_init' );
 

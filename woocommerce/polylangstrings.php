@@ -16,4 +16,8 @@ add_action('init', function() {
 	pll_register_string('sijomealprep', 'Sold Out', 'sijomealprep');
 	pll_register_string('sijomealprep', 'Select options', 'woocommerce');
 	pll_register_string('sijomealprep', 'More Details', 'woocommerce');
+	pll_register_string('sijomealprep', 'Get free shipping if you order ', 'sijomealprep-freeshipping-notice');
+	pll_register_string('sijomealprep', ' more!', 'sijomealprep-freeshipping-notice');
+	pll_register_string('sijomealprep', 'Continue Shopping', 'sijomealprep-freeshipping-notice');
+	pll_register_string('sijomealprep', 'Proceed to pay', 'woocommerce-checkout');
 });
