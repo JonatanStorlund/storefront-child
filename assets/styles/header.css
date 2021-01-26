@@ -35,13 +35,28 @@
 }
 
 @media screen and (min-width: 768px) {
+  .site-header .site-branding .custom-logo {
+    max-width: 70px;
+  }
+
   .site-header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding-top: 0;
   }
 
-  .site-header .site-branding .custom-logo {
-    max-width: 80px;
+  .site-header .col-full {
+    max-width: 70px;
+    margin: 0;
+  }
+
+  .site-header .storefront-primary-navigation .col-full {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .site-header-cart .widget_shopping_cart {
+    width: 400px;
   }
 }
