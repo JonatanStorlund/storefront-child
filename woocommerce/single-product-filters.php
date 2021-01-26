@@ -7,11 +7,7 @@
      <h3 id='at-67843' class='c-accordion__title js-accordion-controller' role='button' tabindex='0' aria-controls='ac-67843' aria-expanded='false'>"
      . pll__('More Details', 'sijomealprep') .
      "</h3>
-     <div id='ac-67843' class='c-accordion__content' hidden='hidden'>
-     <p>
-     . $product->short_description .
-     </p>
-     </div>
+     <div id='ac-67843' class='c-accordion__content' hidden='hidden'>$product->short_description</div>
      </div>";
    }
 
@@ -65,3 +61,5 @@ add_filter( 'wc_product_sku_enabled', 'sv_remove_product_page_skus' );
 };
 
 add_action( 'woocommerce_single_product_summary', 'action_woocommerce_before_main_content', 10, 2 );
+
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
