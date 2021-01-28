@@ -39,6 +39,7 @@ h2,
 h3,
 ul.products li.product .woocommerce-loop-product__title,
 .single-product .price,
+.woocommerce .products .product .price,
 .postcode-checker-msg {
 	font-size: 28px;
 }
@@ -74,6 +75,7 @@ h6 {
 	}
 
 	h4,
+	.woocommerce .products .product .price,
 	ul.products li.product .woocommerce-loop-product__title {
 		font-size: 20px;
 	}
