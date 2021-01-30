@@ -37,13 +37,13 @@ function woa_add_hero_image() {
       ?>
 		<!-- hero banner -->
 		<?php if (get_field('hero_title')) { ?>
-		<a class="hero-link" href="<?php echo get_field('hero_link') ?>">
+		<a class="hero-link" href="<?php echo get_field('hero_link')['url'] ?>">
 			<div class="hero-wrapper desktop" style="background-image: url(<?php echo get_field('hero_image')['url']?>)">
 				<div class="hero-wrapper__left-box hero-wrapper__box desktop">
 					<div>
 						<h1 class="hero-wrapper__left-box-title"><?php echo get_field('hero_title') ?></h1>
-						<?php if(get_field('hero_link')) {?>
-						<button class="hero-wrapper__left-box-button"><?php echo pll__('Till menyn', 'sijomealprep') ?></button>
+						<?php if(get_field('hero_link')['url']) {?>
+						<button class="hero-wrapper__left-box-button"><?php echo get_field('hero_link')['title'] ?></button>
 						<?php } ?>
 					</div>
 				</div>
@@ -52,8 +52,8 @@ function woa_add_hero_image() {
 
         <div class="hero-wrapper section-inner medium mobile alignfull">
             <h1 class="hero-wrapper__left-box-title"><?php echo get_field('hero_title') ?></h1>
-            <?php if(get_field('hero_link')) {?>
-            <button class="hero-wrapper__left-box-button"><?php echo pll__('Till menyn', 'sijomealprep') ?></button>
+            <?php if(get_field('hero_link')['url']) {?>
+            <button class="hero-wrapper__left-box-button"><?php echo get_field('hero_link')['title'] ?></button>
         <?php } ?>
         </div>
 		<?php
