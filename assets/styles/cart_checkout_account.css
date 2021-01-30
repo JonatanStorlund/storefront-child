@@ -1,0 +1,5 @@
+.woocommerce-checkout .storefront-handheld-footer-bar,
+.woocommerce-cart .storefront-handheld-footer-bar,
+.woocommerce-account .storefront-handheld-footer-bar {
+  display: none;
+}
