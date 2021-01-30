@@ -17,6 +17,7 @@ body {
 	font-size: 18px;
 }
 
+.widget-title,
 h1,
 h2,
 h3,
@@ -32,11 +33,13 @@ h1 {
 }
 
 h2,
+.widget .widget-title,
 .product_title.entry-title {
 	font-size: 32px;
 }
 
 h3,
+.testimonial-text,
 ul.products li.product .woocommerce-loop-product__title,
 .single-product .price,
 .woocommerce .products .product .price,
@@ -60,10 +63,11 @@ h6 {
 
 @media screen and (max-width: 768px) {
 	h1 {
-		font-size: 34px;
+		font-size: 30px;
 	}
 
 	h2,
+	.widget .widget-title,
 	.product_title.entry-title {
 		font-size: 28px;
 	}
@@ -75,6 +79,7 @@ h6 {
 	}
 
 	h4,
+	.testimonial-text-container .testimonial-text,
 	.woocommerce .products .product .price,
 	ul.products li.product .woocommerce-loop-product__title {
 		font-size: 20px;
