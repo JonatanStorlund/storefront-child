@@ -87,6 +87,20 @@
   flex-wrap: wrap;
 }
 
+.woocommerce-info {
+  background-color: var(--blue);
+}
+
+.woocommerce-message:before {
+  content: '';
+}
+
+.woocommerce-shipping-totals select {
+  padding: 8px;
+  width: 100%;
+  max-width: 100%;
+}
+
 @media screen and (max-width: 768px) {
   .woocommerce-checkout #order_review .product-total {
     width: 15%;
