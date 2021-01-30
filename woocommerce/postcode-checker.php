@@ -5,8 +5,8 @@ function render_postcode_checker( $atts ){
 	echo '<h3 class="postcode-checker-title">'; echo pll__('postkod checker title', 'sijomealprep-postcode-checker');
 	echo '</h3>';
 	echo '<input class="postcode-checker-input" type="number">';
-	echo '<p class="button postcode-checker-button button--green">'; echo pll__('postkod check button', 'sijomealprep-postcode-checker');
-	echo '</p>';
+	echo '<button class="postcode-checker-button">'; echo pll__('postkod check button', 'sijomealprep-postcode-checker');
+	echo '</button>';
 	echo '<p class="postcode-checker-msg msg-we-deliver">'; echo pll__('we can offer homedelivery', 'sijomealprep-postcode-checker');
 	echo '</p>';
 	echo '<p class="postcode-checker-msg msg-we-dont">'; echo pll__('sorry but you can pickup', 'sijomealprep-postcode-checker');

@@ -25,4 +25,18 @@
   .footer-widgets block:nth-child(odd) {
     margin-right: 0;
   }
+
+  .postcode-checker .postcode-checker-input,
+  .postcode-checker-button {
+    width: 100%;
+  }
+
+  .postcode-checker-button {
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+.widget .widget-title {
+  padding: 0;
 }
