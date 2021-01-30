@@ -1,9 +1,23 @@
-#page .button,
-#page a.button,
-#page button {
+.button,
+a.button,
+a.wp-block-button__link,
+#pwgc-redeem-button,
+#payment .place-order .button,
+.wc-proceed-to-checkout .button.checkout-button,
+.gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type=submit],
+button {
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
   letter-spacing: 1.2pt;
   line-height: 16pt;
+  padding: 14px 20px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+#page .added_to_cart .wc-forward,
+#page .single_add_to_cart_button {
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 
@@ -12,5 +26,22 @@
   .product form.cart .single_add_to_cart_button {
     padding: 2px;
     margin-bottom: 0;
+  }
+
+  #page .added_to_cart .wc-forward,
+  #page .single_add_to_cart_button {
+    font-size: 14px;
+  }
+
+  .button,
+  a.button,
+  a.wp-block-button__link,
+  #pwgc-redeem-button,
+  #payment .place-order .button,
+  .gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type=submit],
+  .wc-proceed-to-checkout .button.checkout-button,
+  button {
+    padding: 8px 14px;
+    font-size: 16px;
   }
 }
