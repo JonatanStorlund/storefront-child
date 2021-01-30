@@ -1,6 +1,11 @@
-.gform_wrapper {
+.gform_wrapper,
+.woocommerce-form-login {
   max-width: 800px;
   margin: auto;
+}
+
+.woocommerce-account .woocommerce h2 {
+  text-align: center;
 }
 
 .gform_wrapper .gform_footer {

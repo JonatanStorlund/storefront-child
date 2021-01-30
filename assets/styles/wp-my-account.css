@@ -2,3 +2,8 @@
 .woocommerce-MyAccount-content .col-1 {
   max-width: unset;
 }
+
+.woocommerce-account .col-1,
+.woocommerce-account .col-2 {
+  max-width: unset;
+}
