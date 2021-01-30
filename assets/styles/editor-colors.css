@@ -1,39 +1,39 @@
 .has-green-color {
-  color: var(--green);
+  color: var(--green) !important;
 }
 
 .has-green-background-color {
-  background-color: var(--green);
+  background-color: var(--green) !important;
 }
 
 .has-blue-color {
-  color: var(--blue);
+  color: var(--blue) !important;
 }
 
 .has-blue-background-color {
-  background-color: var(--blue);
+  background-color: var(--blue) !important;
 }
 
 .has-white-color {
-  color: var(--white);
+  color: var(--white) !important;
 }
 
 .has-white-background-color {
-  background-color: var(--white);
+  background-color: var(--white) !important;
 }
 
 .has-black-color {
-  color: var(--black);
+  color: var(--black) !important;
 }
 
 .has-black-background-color {
-  background-color: var(--black);
+  background-color: var(--black) !important;
 }
 
 .has-gray-color {
-  color: var(--gray);
+  color: var(--gray) !important;
 }
 
 .has-gray-background-color {
-  background-color: var(--gray);
+  background-color: var(--gray) !important;
 }
