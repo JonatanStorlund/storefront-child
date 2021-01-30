@@ -17,3 +17,7 @@
     line-height: 16pt;
   }
 }
+
+.form-row {
+  flex-direction: column;
+}
