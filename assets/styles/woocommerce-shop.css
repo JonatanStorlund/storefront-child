@@ -16,3 +16,11 @@
     margin-right: 4%;
   }
 }
+
+.woocommerce-page .product-type-simple .cart {
+  display: none;
+}
+
+.woocommerce-page .product_type_variable.add_to_cart_button {
+  display: none;
+}
