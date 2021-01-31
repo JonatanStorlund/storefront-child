@@ -5,8 +5,9 @@
   padding: 0 8px;
 }
 
-.woocommerce .products .product .price {
-  color: var(--blue);
+.woocommerce .products .product .price,
+.single-product .price {
+  color: var(--black);
   font-weight: bold;
 }
 
@@ -116,4 +117,19 @@
   .woocommerce .products .product .woocommerce-variation-add-to-cart .wc-forward {
     font-size: 14px;
   }
+}
+
+a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart {
+  background: var(--green);
+  width: 100%;
+}
+
+#page .product-type-simple a.added_to_cart.wc-forward {
+  margin-top: 10px;
+  background: var(--blue);
+  width: 100%;
+}
+
+#page .product-type-simple {
+  padding-bottom: 1.6rem;
 }

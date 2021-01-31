@@ -23,4 +23,18 @@
 
 .single-product .woocommerce-variation-add-to-cart {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.single-product div.product form.cart .quantity {
+  float: unset;
+  margin-right: unset;
+}
+
+.single-product .added_to_cart.wc-forward {
+  width: 100%;
+  margin-top: 10px;
+  background: var(--blue);
+  text-transform: uppercase;
+  text-align: center;
 }

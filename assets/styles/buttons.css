@@ -15,6 +15,9 @@ button {
 }
 
 #page .added_to_cart .wc-forward,
+a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart,
+#page .product-type-simple a.added_to_cart.wc-forward,
+#page .single-product .added_to_cart.wc-forward,
 #page .single_add_to_cart_button {
   font-size: 16px;
   text-transform: uppercase;
@@ -29,6 +32,8 @@ button {
   }
 
   #page .added_to_cart .wc-forward,
+  a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart,
+  #page .product-type-simple a.added_to_cart.wc-forward,
   #page .single_add_to_cart_button {
     font-size: 14px;
   }
