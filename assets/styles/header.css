@@ -11,6 +11,11 @@
 text-transform: uppercase;
 }
 
+.site-header .lang-item a {
+  display: flex;
+  align-items: center;
+}
+
 .admin-bar .site-header {
   max-width: 100vw;
   top: 32px;

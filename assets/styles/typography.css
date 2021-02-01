@@ -23,6 +23,7 @@ h2,
 h3,
 h4,
 h5,
+.websites-depot-checkout-review-shipping-table tbody th,
 h6 {
 	font-family: Teko, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 	letter-spacing: 0.5pt;
@@ -39,6 +40,7 @@ h2,
 }
 
 h3,
+.websites-depot-checkout-review-shipping-table tbody th,
 .testimonial-text,
 ul.products li.product .woocommerce-loop-product__title,
 .single-product .price,
@@ -73,6 +75,7 @@ h6 {
 	}
 
 	h3,
+	.websites-depot-checkout-review-shipping-table tbody th,
 	.single-product .price,
 	.postcode-checker-msg {
 		font-size: 24px;

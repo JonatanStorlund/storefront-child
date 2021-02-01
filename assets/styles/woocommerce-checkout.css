@@ -136,3 +136,20 @@
     margin: 0;
   }
 }
+
+#order_review .woocommerce-shipping-totals {
+  padding: 5px;
+}
+
+.websites-depot-checkout-review-shipping-table tbody th {
+  color: var(--black);
+}
+
+.websites-depot-checkout-review-shipping-table tbody tr {
+  display: flex;
+  flex-direction: column;
+}
+
+.woocommerce-terms-and-conditions-wrapper {
+  display: none;
+}

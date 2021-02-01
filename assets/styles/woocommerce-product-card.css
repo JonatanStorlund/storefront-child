@@ -93,19 +93,31 @@
 
 .macro-container {
   display: flex;
-  background: var(--blue);
-  padding: 10px;
+  margin-bottom: 10px;
 }
 
-.macro-container .macro-container__box {
+.macro-container .macro-container__box{
   width: 50%;
+  text-align: center;
+}
+
+.macro-container .macro-container__box.kcal {
+  background: var(--dark-green);
+  padding: 5px;
+}
+
+.macro-container .macro-container__box.protein {
+  background: var(--dark-blue);
+  padding: 5px;
 }
 
 .macro-container .macro-container__box .macro-container__box-title {
+  margin-bottom: 0;
   color: var(--white);
 }
 
 .macro-container .macro-container__box .macro-container__box-macro {
+  margin-bottom: 0;
   color: var(--white);
 }
 
