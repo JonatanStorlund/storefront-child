@@ -71,16 +71,31 @@ function winwar_add_product_excerpt_into_archive() {
 
       if ( $product->is_type( 'variable' ) ) {
         echo '<div class="macro-container">';
-        echo '<div class="macro-container__box">';
+        echo '<div class="macro-container__box kcal">';
         echo '<h4 class="macro-container__box-title">Kcal</h4>';
         echo '<div class="macro-container__box-container">';
         echo '<h4 class="macro-container__box-macro">'. strstr($largeKcal, '.', true) . ' / ' . strstr($smallKcal, '.', true) .'</h4>';
         echo '</div>';
         echo '</div>';
-        echo '<div class="macro-container__box">';
+        echo '<div class="macro-container__box protein">';
         echo '<h4 class="macro-container__box-title">Protein</h4>';
         echo '<div class="macro-container__box-container">';
         echo '<h4 class="macro-container__box-macro small-protein">'. strstr($largeProtein, '.', true) . ' / ' . strstr($smallProtein, '.', true) .'</h4>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+      } else {
+        echo '<div class="macro-container">';
+        echo '<div class="macro-container__box kcal">';
+        echo '<h4 class="macro-container__box-title">Kcal</h4>';
+        echo '<div class="macro-container__box-container">';
+        echo '<h4 class="macro-container__box-macro">'. $smallKcal .'</h4>';
+        echo '</div>';
+        echo '</div>';
+        echo '<div class="macro-container__box protein">';
+        echo '<h4 class="macro-container__box-title">Protein</h4>';
+        echo '<div class="macro-container__box-container">';
+        echo '<h4 class="macro-container__box-macro small-protein">'. $smallProtein .'</h4>';
         echo '</div>';
         echo '</div>';
         echo '</div>';
