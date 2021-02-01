@@ -3,7 +3,7 @@
 }
 
 .single-product .c-accordion__title {
-  background: var(--green);
+  background: var(--black);
   color: var(--white);
   padding: 10px;
 }
@@ -37,4 +37,23 @@
   background: var(--blue);
   text-transform: uppercase;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .single-product .product {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .single-product .product .macro-container__box-title,
+  .single-product .product .macro-container__box-macro {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .single-product .product .macro-container__box-title,
+  .single-product .product .macro-container__box-macro {
+    font-size: 28px;
+  }
 }
