@@ -1,0 +1,50 @@
+@media screen and (max-width: 768px) {
+  .woocommerce-cart .cart_item {
+    display: grid;
+    grid-template-areas:
+    'remov name price quantity subtotal';
+    grid-template-columns: 40px 2fr 1fr 1fr 1fr;
+  }
+
+  .woocommerce-cart .cart_item .product-thumbnail {
+    display: none;
+  }
+
+  .woocommerce-cart .cart_item .product-remove {
+    grid-area: remov;
+    border-top: unset;
+  }
+
+  .woocommerce-cart .cart_item .product-remove a.remove {
+    top: 25%;
+    right: 10px;
+    font-size: 12px;
+  }
+
+  .woocommerce-cart .cart_item .product-name {
+    grid-area: name;
+  }
+
+  .woocommerce-cart .cart_item .product-price {
+    grid-area: price;
+  }
+
+  .woocommerce-cart .cart_item .product-quantity {
+    grid-area: quantity;
+  }
+
+  .woocommerce-cart .cart_item .product-subtotal {
+    grid-area: subtotal;
+  }
+
+  .woocommerce-cart .cart_item .product-name,
+  .woocommerce-cart .cart_item .product-price,
+  .woocommerce-cart .cart_item .product-quantity,
+  .woocommerce-cart .cart_item .product-subtotal {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    text-align: left;
+    font-size: 12px;
+  }
+}
