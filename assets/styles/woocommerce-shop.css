@@ -24,3 +24,7 @@
 .woocommerce-page .product_type_variable.add_to_cart_button {
   display: none;
 }
+
+.swatch__tooltip {
+  display: none;
+}
