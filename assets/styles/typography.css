@@ -35,6 +35,8 @@ h1 {
 
 h2,
 .widget .widget-title,
+.macro-container__box-title,
+.macro-container__box-macro,
 .product_title.entry-title {
 	font-size: 32px;
 }
@@ -77,6 +79,8 @@ h6 {
 	h3,
 	.websites-depot-checkout-review-shipping-table tbody th,
 	.single-product .price,
+	.macro-container__box-title,
+	.macro-container__box-macro,
 	.postcode-checker-msg {
 		font-size: 24px;
 	}

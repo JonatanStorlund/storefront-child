@@ -74,13 +74,15 @@ function winwar_add_product_excerpt_into_archive() {
         echo '<div class="macro-container__box kcal">';
         echo '<h4 class="macro-container__box-title">Kcal</h4>';
         echo '<div class="macro-container__box-container">';
-        echo '<h4 class="macro-container__box-macro">'. strstr($largeKcal, '.', true) . ' / ' . strstr($smallKcal, '.', true) .'</h4>';
+        echo '<h4 class="macro-container__box-macro large-cal">'. $largeKcal .'</h4>';
+        echo '<h4 class="macro-container__box-macro small-cal">'. $smallKcal .'</h4>';
         echo '</div>';
         echo '</div>';
         echo '<div class="macro-container__box protein">';
         echo '<h4 class="macro-container__box-title">Protein</h4>';
         echo '<div class="macro-container__box-container">';
-        echo '<h4 class="macro-container__box-macro small-protein">'. strstr($largeProtein, '.', true) . ' / ' . strstr($smallProtein, '.', true) .'</h4>';
+        echo '<h4 class="macro-container__box-macro small-protein large-protein">'. $largeProtein .'</h4>';
+        echo '<h4 class="macro-container__box-macro small-protein small-protein">'. $smallProtein .'</h4>';
         echo '</div>';
         echo '</div>';
         echo '</div>';

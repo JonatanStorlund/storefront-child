@@ -44,16 +44,4 @@
     max-width: 900px;
     margin: auto;
   }
-
-  .single-product .product .macro-container__box-title,
-  .single-product .product .macro-container__box-macro {
-    font-size: 32px;
-  }
-}
-
-@media (max-width: 768px) {
-  .single-product .product .macro-container__box-title,
-  .single-product .product .macro-container__box-macro {
-    font-size: 28px;
-  }
 }
