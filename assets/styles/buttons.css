@@ -7,11 +7,14 @@ a.wp-block-button__link,
 .gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type=submit],
 button {
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
-  letter-spacing: 1.2pt;
-  line-height: 16pt;
+  letter-spacing: 1pt;
+  line-height: 14pt;
   padding: 14px 20px;
   text-transform: uppercase;
   font-size: 18px;
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(51,51,51,1);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(51,51,51,1);
+  box-shadow: 3px 3px 5px 0px rgba(51,51,51,1);
 }
 
 #page .added_to_cart .wc-forward,

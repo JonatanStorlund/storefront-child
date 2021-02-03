@@ -28,3 +28,16 @@
 .swatch__tooltip {
   display: none;
 }
+
+.tawcvs-swatches .swatch.selected {
+  pointer-events: none;
+  border-color: var(--green);
+  box-shadow: inset 0 -4px 0 var(--white);
+}
+
+.select-size {
+  margin-bottom: 0;
+  background: var(--black);
+  padding: 3px;
+  color: var(--white);
+}

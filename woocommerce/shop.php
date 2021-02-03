@@ -86,6 +86,7 @@ function winwar_add_product_excerpt_into_archive() {
         echo '</div>';
         echo '</div>';
         echo '</div>';
+        echo '<h6 class="select-size">' . pll__('Select Size', 'sijomealprep-postcode-checker') . '</h6>';
       } else {
         echo '<div class="macro-container">';
         echo '<div class="macro-container__box kcal">';
