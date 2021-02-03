@@ -3,4 +3,9 @@
     margin-left: 12px;
     margin-right: 12px;
   }
+
+  #main,
+  #main article.page {
+    margin-bottom: 0;
+  }
 }

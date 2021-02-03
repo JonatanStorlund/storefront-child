@@ -2,6 +2,11 @@
   background: #fff;
 }
 
+.woocommerce-cart #page table th,
+.woocommerce-cart #page table td {
+  padding: 5px 10px;
+}
+
 @media screen and (max-width: 768px) {
   .woocommerce-cart .cart_item {
     display: grid;
@@ -55,10 +60,23 @@
   .woocommerce-cart #page table.cart td.actions {
     background: var(--green);
     margin-top: 0;
+    padding: 10px;
+  }
+
+  .woocommerce-cart table.cart td.actions .coupon {
+    font-size: 16px;
+    border-bottom: none;
+    padding-bottom: 10px;
+    margin-bottom: 0;
   }
 
   .woocommerce-cart #page table.cart td.actions input {
     margin-top: 0;
+  }
+
+  .woocommerce-cart .order-total td,
+  .woocommerce-cart .cart-discount td {
+    font-size: 16px;
   }
 }
 
@@ -75,6 +93,23 @@
   color: inherit;
 }
 
+.woocommerce-cart .cart-subtotal {
+  display: none;
+}
+
+.woocommerce-cart .order-total td,
+.woocommerce-cart .cart-discount td {
+  padding: 5px 10px;
+}
+
+table.shop_table_responsive tr td[data-title]:before {
+  font-weight: normal;
+}
+
+.woocommerce-cart .shop_table td {
+  font-weight: normal;
+}
+
 .woocommerce-cart table th,
 .woocommerce-cart table:not( .has-background ) tbody td,
 .woocommerce-cart table:not( .has-background ) tbody tr:nth-child(2n) td, fieldset, fieldset legend,
@@ -86,4 +121,14 @@
 .woocommerce-cart .cart_totals table {
   background: var(--blue);
   color: var(--white);
+}
+
+.woocommerce-cart .cart_totals table {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.woocommerce-cart .cart_totals table td:last-child {
+  text-align: right;
+  padding: 5px 10px;
 }
