@@ -5,7 +5,7 @@ function render_postcode_checker( $atts ){
 	echo '<h3 class="postcode-checker-title">'; echo pll__('postkod checker title', 'sijomealprep-postcode-checker');
 	echo '</h3>';
 	echo '<input class="postcode-checker-input" type="number">';
-	echo '<button class="postcode-checker-button">'; echo pll__('postkod check button', 'sijomealprep-postcode-checker');
+	echo '<button type="button" class="postcode-checker-button">'; echo pll__('postkod check button', 'sijomealprep-postcode-checker');
 	echo '</button>';
 	echo '<p class="postcode-checker-msg msg-we-deliver">'; echo pll__('we can offer homedelivery', 'sijomealprep-postcode-checker');
 	echo '</p>';
@@ -29,7 +29,8 @@ function render_postcode_checker( $atts ){
 		$msgDont.hide();
 		$msgTryagain.hide();
 
-		$checkerButton.mousedown(function() {
+		$checkerButton.mousedown(function(e) {
+			e.preventDefault()
 			const zipcodeIncluded = $checkerInput.val().match(/^(666|667|68|679|678|677|676|674|673|672|671|669|668|6659|6658|6656|6655|6654|6653|651|652|653|656|6571|6573)/);
 
 			if ($checkerInput.val().length === 5 && typeof Number) {
@@ -56,6 +57,7 @@ function render_postcode_checker( $atts ){
 
 		$checkerInput.keypress(function(event) {
 				if (event.keyCode === 13) {
+					event.preventDefault();
 					$checkerButton.mousedown();
 				}
 		});
@@ -70,6 +72,6 @@ function render_postcode_checker( $atts ){
 
 add_shortcode( 'postcode_checker', 'render_postcode_checker' );
 
-function add_postcode_checker() {
- 	echo do_shortcode("[postcode_checker]");
-}
+// function add_postcode_checker() {
+//  	echo do_shortcode("[postcode_checker]");
+// }

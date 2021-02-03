@@ -7,9 +7,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <table class="shop_table websites-depot-checkout-review-shipping-table">
 
 	<?php do_action( 'woocommerce_review_order_before_shipping' ); ?>
-
+		<?php echo do_shortcode('[postcode_checker]'); ?>
 		<?php wc_cart_totals_shipping_html(); ?>
-
 	<?php do_action( 'woocommerce_review_order_after_shipping' ); ?>
 
 </table>

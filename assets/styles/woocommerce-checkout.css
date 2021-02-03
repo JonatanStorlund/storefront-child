@@ -3,6 +3,13 @@
   max-width: none;
 }
 
+.wc-paytrail-methods-container .wc-paytrail-method {
+  width: 20%;
+  background-size: 85%;
+  margin: 0;
+  height: auto;
+}
+
 .woocommerce .checkout .col2-set .col-1 .form-row,
 .woocommerce .checkout .col2-set .col-2 .form-row {
   display: block;
@@ -41,16 +48,6 @@
   .woocommerce-checkout #order_review .woocommerce-shipping-totals {
     display: flex;
     flex-direction: column;
-  }
-
-  .wc-paytrail-methods-container .wc-paytrail-method {
-    width: 22%;
-    min-width: 120px;
-  }
-
-  .wc-paytrail-methods-container .wc-paytrail-method {
-    width: 25%;
-    margin: 0;
   }
 }
 
@@ -101,10 +98,24 @@
   max-width: 100%;
 }
 
+.woocommerce-checkout #postcode-checker,
+.woocommerce-checkout .websites-depot-checkout-review-shipping-table {
+  background: var(--black);
+  padding: 10px;
+  width: 50%;
+}
+
 @media screen and (max-width: 768px) {
   .woocommerce-checkout #order_review .product-total {
     width: 15%;
   }
+
+.woocommerce-checkout #postcode-checker,
+.woocommerce-checkout .websites-depot-checkout-review-shipping-table {
+  background: var(--black);
+  padding: 10px;
+  width: 100%;
+}
 
   .woocommerce-checkout .shop_table {
     font-size: 16px;
@@ -131,9 +142,15 @@
   }
 
   .wc-paytrail-methods-container .wc-paytrail-method {
-    width: 33.3%;
+    width: 25%;
+    background-size: 85%;
     margin: 0;
+    height: auto;
   }
+}
+
+#page .wc-paytrail-methods-container .wc-paytrail-method input[type="radio"] {
+  margin: 60px 0 0 !important;
 }
 
 #order_review .woocommerce-shipping-totals {
@@ -151,4 +168,52 @@
 
 .woocommerce-terms-and-conditions-wrapper {
   display: none;
+}
+
+.woocommerce-checkout #postcode-checker p {
+  margin-bottom: 0;
+  color: var(--white);
+}
+
+.woocommerce-checkout #postcode-checker p.msg-we-deliver {
+  color: var(--green);
+}
+
+.woocommerce-checkout #postcode-checker .postcode-checker-title,
+.woocommerce-checkout .websites-depot-checkout-review-shipping-table th,
+.woocommerce-checkout .websites-depot-checkout-review-shipping-table td {
+  color: var(--white);
+  font-weight: normal;
+}
+
+.woocommerce-checkout #postcode-checker .postcode-checker-input {
+  font-size: 16px;
+}
+
+.woocommerce-checkout .websites-depot-checkout-review-shipping-table {
+  margin-bottom: 2rem;
+}
+
+.woocommerce-checkout .websites-depot-checkout-review-shipping-table th,
+.woocommerce-checkout .websites-depot-checkout-review-shipping-table td {
+  background: transparent;
+  border: none;
+}
+
+.woocommerce-checkout #postcode-checker:not(:first-child) {
+  display: none;
+}
+
+.woocommerce-checkout #order_review table {
+  margin-bottom: 0;
+}
+
+.woocommerce-checkout #payment .place-order {
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.woocommerce-checkout #order_review table td,
+.woocommerce-checkout #order_review table th {
+  background: transparent;
 }
