@@ -41,3 +41,11 @@
   padding: 3px;
   color: var(--white);
 }
+
+.tawcvs-swatches {
+  display: flex;
+}
+
+.tawcvs-swatches .swatch-normal {
+  order: -1;
+}
