@@ -1,6 +1,7 @@
 .woocommerce .checkout .col2-set .col-1,
 .woocommerce .checkout .col2-set .col-2 {
   max-width: none;
+  padding: 0;
 }
 
 .wc-paytrail-methods-container .wc-paytrail-method {
@@ -40,6 +41,7 @@
 
   .woocommerce-checkout #customer_details .col-1,
   .woocommerce-checkout .woocommerce-info,
+  .checkout_pw_gift_card.woocommerce-form-coupon,
   .woocommerce-checkout .woocommerce-info,
   .woocommerce-checkout .checkout_coupon.woocommerce-form-coupon,
   .woocommerce-checkout #customer_details .col-2 {
@@ -211,10 +213,23 @@
   margin-bottom: 2rem;
 }
 
-.woocommerce-checkout .websites-depot-checkout-review-shipping-table th,
-.woocommerce-checkout .websites-depot-checkout-review-shipping-table td {
+.woocommerce-checkout table:not( .has-background ) tbody td,
+.woocommerce-checkout table:not( .has-background ) tbody tr:nth-child(2n) td, fieldset, fieldset legend,
+.woocommerce-checkout table:not( .has-background ) th,
+.woocommerce-checkout .websites-depot-checkout-review-order-table th,
+.woocommerce-checkout .websites-depot-checkout-review-order-table td {
   background: transparent;
   border: none;
+}
+
+.woocommerce-checkout .woocommerce-shipping-totals.shipping th,
+.woocommerce-checkout .shipping-pickup-store th {
+  color: var(--green);
+}
+
+.woocommerce-checkout .shop_table.woocommerce-checkout-review-order-table {
+  background: var(--blue);
+  color: var(--white);
 }
 
 .woocommerce-checkout #order_review table {

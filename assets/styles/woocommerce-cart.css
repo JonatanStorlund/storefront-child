@@ -58,8 +58,19 @@
   }
 
   .woocommerce-cart #page table.cart td.actions {
-    background: var(--green);
+    display: flex;
+    flex-direction: column;
+    border-top: none;
     margin-top: 0;
+  }
+
+  .woocommerce-cart #page table.cart td.actions [name="update_cart"] {
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  .woocommerce-cart #page table.cart td.actions .coupon {
+    background: var(--green);
     padding: 10px;
   }
 
@@ -131,4 +142,9 @@ table.shop_table_responsive tr td[data-title]:before {
 .woocommerce-cart .cart_totals table td:last-child {
   text-align: right;
   padding: 5px 10px;
+}
+
+.woocommerce-cart table.cart td.actions label {
+  display: block;
+  text-align: left;
 }

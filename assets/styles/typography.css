@@ -29,12 +29,14 @@ p,
 
 .widget-title,
 .woocommerce-info .button.wc-forward,
+label[for="pwgc-redeem-gift-card-number"],
 .woocommerce-shipping-totals.shipping th,
 h1,
 h2,
 h3,
 h4,
 h5,
+.woocommerce-cart table.cart td.actions label,
 .websites-depot-checkout-review-shipping-table tbody th,
 .swatch,
 h6 {
@@ -57,7 +59,9 @@ h2,
 }
 
 h3,
+label[for="pwgc-redeem-gift-card-number"],
 .woocommerce-shipping-totals.shipping th,
+.woocommerce-cart table.cart td.actions label,
 .websites-depot-checkout-review-shipping-table tbody th,
 .testimonial-text,
 ul.products li.product .woocommerce-loop-product__title,
@@ -93,7 +97,9 @@ h6 {
 	}
 
 	h3,
+	label[for="pwgc-redeem-gift-card-number"],
 	.woocommerce-shipping-totals.shipping th,
+	.woocommerce-cart table.cart td.actions label,
 	.websites-depot-checkout-review-shipping-table tbody th,
 	.single-product .price,
 	.macro-container__box-title,
