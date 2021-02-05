@@ -7,3 +7,16 @@
 .woocommerce-account .col-2 {
   max-width: unset;
 }
+
+.wp-block-group.login-form .col2-set#customer_login .col-2,
+.wp-block-group.register-form .col2-set#customer_login .col-1 {
+    display: none;
+}
+
+.wp-block-group.login-form .col2-set#customer_login .col-1,
+.wp-block-group.registration-form .col2-set#customer_login .col-2 {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    float: unset;
+}
