@@ -103,3 +103,24 @@ function storefront_child_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'storefront_child_scripts' );
+
+function hook_css() {
+    if ( is_user_logged_in() ) {
+    ?>
+        <style>
+            .login {
+                display: none !important;
+            }
+        </style>
+    <?php
+    } else {
+        ?>
+        <style>
+            .register {
+                display: none !important;
+            }
+        </style>
+    <?php
+    }
+}
+add_action('wp_head', 'hook_css');
