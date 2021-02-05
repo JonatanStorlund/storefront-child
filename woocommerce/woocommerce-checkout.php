@@ -79,7 +79,7 @@ add_filter( 'woocommerce_checkout_fields', 'hide_local_pickup_method' );
 
 function hide_local_pickup_method( $fields_pickup ) {
     // change below for the method
-    $shipping_method_pickup ='local_pickup:7';
+    $shipping_method_pickup ='wpll-shipping-method';
     // change below for the list of fields. Add (or delete) the field name you want (or don’t want) to use
     $hide_fields_pickup = array( 'billing_company', 'billing_country', 'billing_postcode', 'billing_address_1', 'billing_address_2' , 'billing_city', 'billing_state');
 
@@ -109,7 +109,7 @@ function local_pickup_fields() {
                 return false;
             }
             $('body').on('updated_checkout', function () {
-            $('.billing-dynamic_pickup').toggleClass('hide_pickup', $('#shipping_method_0 [value="local_pickup:7"]').is(':selected') || $('#shipping_method_0 [value="local_pickup:12"]').is(':selected'));
+            $('.billing-dynamic_pickup').toggleClass('hide_pickup', $('#shipping_method_0 [value="wpll-shipping-method"]').is(':selected'));
             });
         });
     </script>
@@ -117,29 +117,8 @@ function local_pickup_fields() {
     endif;
 }
 
-add_filter('woocommerce_update_order_review_fragments', 'websites_depot_order_fragments_split_shipping', 10, 1);
+remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
+add_action( 'woocommerce_after_order_notes', 'woocommerce_checkout_payment', 20 );
 
-function websites_depot_order_fragments_split_shipping($order_fragments) {
-
-	ob_start();
-	websites_depot_woocommerce_order_review_shipping_split();
-	$websites_depot_woocommerce_order_review_shipping_split = ob_get_clean();
-
-	$order_fragments['.websites-depot-checkout-review-shipping-table'] = $websites_depot_woocommerce_order_review_shipping_split;
-
-	return $order_fragments;
-
-}
-
-// We'll get the template that just has the shipping options that we need for the new table
-function websites_depot_woocommerce_order_review_shipping_split( $deprecated = false ) {
-	wc_get_template( 'shipping-order-review.php', array( 'checkout' => WC()->checkout() ) );
-}
-
-
-// Hook the new table in before the customer details - you can move this anywhere you'd like. Dropping the html into the checkout template files should work too.
-add_action('woocommerce_checkout_before_customer_details', 'websites_depot_move_new_shipping_table', 5);
-
-function websites_depot_move_new_shipping_table() {
-	echo '<div class="shop_table websites-depot-checkout-review-shipping-table"></div>';
-}
+remove_action( 'woocommerce_checkout_order_review', 'woocommerce_order_review', 10 );
+add_action( 'woocommerce_before_checkout_billing_form', 'woocommerce_order_review', 10 );

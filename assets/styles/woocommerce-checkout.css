@@ -4,8 +4,8 @@
 }
 
 .wc-paytrail-methods-container .wc-paytrail-method {
-  width: 20%;
-  background-size: 85%;
+  width: 12.5%;
+  background-size: 70%;
   margin: 0;
   height: auto;
 }
@@ -31,14 +31,12 @@
 
 @media screen and (min-width: 768px) {
   .woocommerce-checkout #customer_details {
-    width: 50%;
-    margin-right: 1%;
+    width: 100%;
   }
 
   .woocommerce-checkout #order_review,
   .woocommerce-checkout #order_review_heading {
     color: var(--black);
-    width: 49%;
   }
 
   .woocommerce-checkout #order_review .product-total {
