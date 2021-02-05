@@ -17,8 +17,19 @@ body {
 	font-size: 18px;
 }
 
+p,
+.woocommerce-checkout #customer_details .shipping-pickup-store .wpll-pickup-info {
+	font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 18px;
+}
+
+#main .entry-header {
+	padding-bottom: 1.5rem;
+}
+
 .widget-title,
 .woocommerce-info .button.wc-forward,
+.woocommerce-shipping-totals.shipping th,
 h1,
 h2,
 h3,
@@ -29,6 +40,8 @@ h5,
 h6 {
 	font-family: Teko, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 	letter-spacing: 0.5pt;
+	color: var(--black);
+	font-weight: normal;
 }
 
 h1 {
@@ -44,6 +57,7 @@ h2,
 }
 
 h3,
+.woocommerce-shipping-totals.shipping th,
 .websites-depot-checkout-review-shipping-table tbody th,
 .testimonial-text,
 ul.products li.product .woocommerce-loop-product__title,
@@ -79,6 +93,7 @@ h6 {
 	}
 
 	h3,
+	.woocommerce-shipping-totals.shipping th,
 	.websites-depot-checkout-review-shipping-table tbody th,
 	.single-product .price,
 	.macro-container__box-title,
@@ -102,5 +117,10 @@ h6 {
 	h6,
 	.tawcvs-swatches .swatch {
 		font-size: 14px;
+	}
+
+	p,
+	.woocommerce-checkout #customer_details .shipping-pickup-store .wpll-pickup-info {
+		font-size: 16px;
 	}
 }

@@ -4,8 +4,8 @@
 }
 
 .wc-paytrail-methods-container .wc-paytrail-method {
-  width: 12.5%;
-  background-size: 70%;
+  width: 20%;
+  background-size: 55%;
   margin: 0;
   height: auto;
 }
@@ -32,6 +32,19 @@
 @media screen and (min-width: 768px) {
   .woocommerce-checkout #customer_details {
     width: 100%;
+    margin: 1.5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .woocommerce-checkout #customer_details .col-1,
+  .woocommerce-checkout .woocommerce-info,
+  .woocommerce-checkout .woocommerce-info,
+  .woocommerce-checkout .checkout_coupon.woocommerce-form-coupon,
+  .woocommerce-checkout #customer_details .col-2 {
+    max-width: 900px;
+    margin: 10px auto;
   }
 
   .woocommerce-checkout #order_review,
@@ -96,24 +109,10 @@
   max-width: 100%;
 }
 
-.woocommerce-checkout #postcode-checker,
-.woocommerce-checkout .websites-depot-checkout-review-shipping-table {
-  background: var(--black);
-  padding: 10px;
-  width: 50%;
-}
-
 @media screen and (max-width: 768px) {
   .woocommerce-checkout #order_review .product-total {
     width: 15%;
   }
-
-.woocommerce-checkout #postcode-checker,
-.woocommerce-checkout .websites-depot-checkout-review-shipping-table {
-  background: var(--black);
-  padding: 10px;
-  width: 100%;
-}
 
   .woocommerce-checkout .shop_table {
     font-size: 16px;
@@ -133,17 +132,57 @@
     flex-direction: column;
   }
 
-  .woocommerce-info,
-  .woocommerce-message {
-    border-left: none;
-    padding: 5px 10px;
-  }
-
   .wc-paytrail-methods-container .wc-paytrail-method {
     width: 25%;
     background-size: 85%;
     margin: 0;
     height: auto;
+  }
+
+  .woocommerce-checkout .shop_table.woocommerce-checkout-review-order-table {
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .woocommerce-checkout #customer_details .woocommerce-shipping-totals,
+  .woocommerce-checkout #customer_details .shipping-pickup-store {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+  }
+
+  .woocommerce-checkout #customer_details .shipping-pickup-store .wpll-pickup-location-select {
+    padding: 8px;
+  }
+
+  .woocommerce-checkout #customer_details .shipping-pickup-store .wpll-pickup-location-select,
+  .woocommerce-checkout #customer_details .shipping-pickup-store .wpll-pickup-info {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.woocommerce-checkout #customer_details .shipping-pickup-store .wpll-pickup-location-select {
+  width: 100%;
+  padding: 8px;
+}
+
+.woocommerce-checkout #customer_details .shipping-pickup-store .wpll-pickup-info {
+  text-align: left;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 376px) {
+  .woocommerce-checkout #customer_details .woocommerce-shipping-totals,
+  .woocommerce-checkout #customer_details .shipping-pickup-store {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .woocommerce-checkout #customer_details .woocommerce-shipping-totals,
+  .woocommerce-checkout #customer_details .shipping-pickup-store {
+    width: 260px;
   }
 }
 
@@ -168,26 +207,6 @@
   display: none;
 }
 
-.woocommerce-checkout #postcode-checker p {
-  margin-bottom: 0;
-  color: var(--white);
-}
-
-.woocommerce-checkout #postcode-checker p.msg-we-deliver {
-  color: var(--green);
-}
-
-.woocommerce-checkout #postcode-checker .postcode-checker-title,
-.woocommerce-checkout .websites-depot-checkout-review-shipping-table th,
-.woocommerce-checkout .websites-depot-checkout-review-shipping-table td {
-  color: var(--white);
-  font-weight: normal;
-}
-
-.woocommerce-checkout #postcode-checker .postcode-checker-input {
-  font-size: 16px;
-}
-
 .woocommerce-checkout .websites-depot-checkout-review-shipping-table {
   margin-bottom: 2rem;
 }
@@ -196,10 +215,6 @@
 .woocommerce-checkout .websites-depot-checkout-review-shipping-table td {
   background: transparent;
   border: none;
-}
-
-.woocommerce-checkout #postcode-checker:not(:first-child) {
-  display: none;
 }
 
 .woocommerce-checkout #order_review table {
@@ -214,4 +229,8 @@
 .woocommerce-checkout #order_review table td,
 .woocommerce-checkout #order_review table th {
   background: transparent;
+}
+
+#order_review_heading {
+  display: none;
 }

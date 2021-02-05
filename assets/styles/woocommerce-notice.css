@@ -42,4 +42,10 @@
   .woocommerce-info a {
     margin-left: 5px;
   }
+  .woocommerce-info,
+  .woocommerce-message {
+    border-left: none;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
 }
