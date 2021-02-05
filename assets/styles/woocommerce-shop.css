@@ -13,7 +13,7 @@
   }
 
   .woocommerce .products .product:nth-child(odd) {
-    margin-right: 4%;
+    margin-right: 10px;
   }
 }
 

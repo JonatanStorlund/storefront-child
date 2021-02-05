@@ -35,7 +35,7 @@ add_action('woocommerce_checkout_process', function () {
 });
 
 add_action( 'woocommerce_before_cart', 'bbloomer_free_shipping_cart_notice' );
-add_action('woocommerce_before_checkout_form', 'bbloomer_free_shipping_cart_notice');
+add_action('woocommerce_before_checkout_form', 'bbloomer_free_shipping_cart_notice', 10, 2);
 
   function bbloomer_free_shipping_cart_notice() {
     $min_amount = 60; //change this to your free shipping threshold
