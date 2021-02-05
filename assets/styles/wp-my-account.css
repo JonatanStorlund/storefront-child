@@ -8,15 +8,24 @@
   max-width: unset;
 }
 
-.wp-block-group.login-form .col2-set#customer_login .col-2,
-.wp-block-group.register-form .col2-set#customer_login .col-1 {
-    display: none;
+.no-account-wrapper .has-account-title,
+.no-account-wrapper .sign-in-button,
+.col2-set#customer_login .col-2 {
+  display: none;
 }
 
-.wp-block-group.login-form .col2-set#customer_login .col-1,
-.wp-block-group.registration-form .col2-set#customer_login .col-2 {
+.col2-set#customer_login .col-1,
+.no-account-wrapper,
+.col2-set#customer_login .col-2 {
     width: 100%;
     max-width: 800px;
     margin: auto;
     float: unset;
+}
+
+.no-account-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }

@@ -21,6 +21,7 @@ include $path . 'woocommerce/shop.php';
 include $path . 'woocommerce/single-product-filters.php';
 include $path . 'woocommerce/woocommerce-checkout.php';
 include $path . 'woocommerce/postcode-checker.php';
+include $path . 'woocommerce/woocommerce-my-account.php';
 include $path . 'woocommerce/polylangstrings.php';
 
 add_action( 'init', 'woa_add_hero_image_init' );
@@ -100,27 +101,7 @@ function storefront_child_scripts() {
     wp_enqueue_script( 'translate-scripts', get_stylesheet_directory_uri() . '/assets/scripts/translate.js', array( 'jquery' ),'',true );
     wp_enqueue_script( 'toggle-script', get_stylesheet_directory_uri() . '/assets/scripts/swatch-toggle.js', array( 'jquery' ),'',true );
     wp_enqueue_script( 'shop-swatch-toggle', get_stylesheet_directory_uri() . '/assets/scripts/shop-swatch-toggle.js', array( 'jquery' ),'',true );
+    wp_enqueue_script( 'toggle-register-login-form', get_stylesheet_directory_uri() . '/assets/scripts/toggle-register-login-form.js', array( 'jquery' ),'',true );
 }
 
 add_action( 'wp_enqueue_scripts', 'storefront_child_scripts' );
-
-function hook_css() {
-    if ( is_user_logged_in() ) {
-    ?>
-        <style>
-            .login {
-                display: none !important;
-            }
-        </style>
-    <?php
-    } else {
-        ?>
-        <style>
-            .register {
-                display: none !important;
-            }
-        </style>
-    <?php
-    }
-}
-add_action('wp_head', 'hook_css');

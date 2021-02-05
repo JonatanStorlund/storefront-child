@@ -20,5 +20,9 @@ add_action('init', function() {
 	pll_register_string('sijomealprep', ' more!', 'sijomealprep-freeshipping-notice');
 	pll_register_string('sijomealprep', 'Continue Shopping', 'sijomealprep-freeshipping-notice');
 	pll_register_string('sijomealprep', 'Proceed to pay', 'woocommerce-checkout');
+	pll_register_string('sijomealprep', 'Register', 'sijomealprep');
+	pll_register_string('sijomealprep', 'No account?', 'sijomealprep');
 	pll_register_string('sijomealprep', 'Select Size', 'sijomealprep');
+	pll_register_string('sijomealprep', 'Already have an account?', 'sijomealprep');
+	pll_register_string('sijomealprep', 'Sign in', 'sijomealprep');
 });
