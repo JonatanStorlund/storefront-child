@@ -89,11 +89,7 @@ add_action( 'after_setup_theme', 'add_custom_editor_colors' );
 
 
 function storefront_child_scripts() {
-    wp_enqueue_script( 'storefront-child-scripts', get_stylesheet_directory_uri() . '/assets/scripts/hide-show-on-scroll.js', array( 'jquery' ),'',true );
-    wp_enqueue_script( 'translate-scripts', get_stylesheet_directory_uri() . '/assets/scripts/translate.js', array( 'jquery' ),'',true );
-    wp_enqueue_script( 'toggle-script', get_stylesheet_directory_uri() . '/assets/scripts/swatch-toggle.js', array( 'jquery' ),'',true );
-    wp_enqueue_script( 'shop-swatch-toggle', get_stylesheet_directory_uri() . '/assets/scripts/shop-swatch-toggle.js', array( 'jquery' ),'',true );
-    wp_enqueue_script( 'toggle-register-login-form', get_stylesheet_directory_uri() . '/assets/scripts/toggle-register-login-form.js', array( 'jquery' ),'',true );
+    wp_enqueue_script( 'main-script', get_stylesheet_directory_uri() . '/assets/scripts/main.js', array( 'jquery' ),'',true );
 }
 
 add_action( 'wp_enqueue_scripts', 'storefront_child_scripts' );
