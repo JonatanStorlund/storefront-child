@@ -459,7 +459,7 @@ hero start
   }
 
   .hero-wrapper .hero-wrapper__left-box-title {
-    text-shadow: 2px 2px 1px rgb(39 39 39);
+    text-shadow: 2px 2px 1px var(--black);
     color: var(--white);
   }
 
