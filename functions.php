@@ -89,7 +89,7 @@ add_action( 'after_setup_theme', 'add_custom_editor_colors' );
 
 
 function storefront_child_scripts() {
-    wp_enqueue_script( 'main-script', get_stylesheet_directory_uri() . '/assets/scripts/main.js', array( 'jquery' ),'',true );
+    wp_enqueue_script( 'main-script', get_stylesheet_directory_uri() . '/assets/scripts/main.js', array( 'jquery' ), rand(),true );
 }
 
 add_action( 'wp_enqueue_scripts', 'storefront_child_scripts' );
