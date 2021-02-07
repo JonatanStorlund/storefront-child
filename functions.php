@@ -12,8 +12,19 @@ if ( !function_exists( 'chld_thm_cfg_locale_css' ) ):
         return $uri;
     }
 endif;
-add_filter( 'locale_stylesheet_uri', 'chld_thm_cfg_locale_css' );
 
+function my_theme_styles()
+{
+    $themeVersion = wp_get_theme()->get('Version');
+    
+    // Enqueue our style.css with our own version
+    wp_enqueue_style('child-theme-style', get_stylesheet_directory_uri() . '/style.css',
+    array(), $themeVersion);
+}
+
+add_filter( 'locale_stylesheet_uri', 'chld_thm_cfg_locale_css' );
+// Enqueue this theme's scripts and styles (after parent theme)
+add_action('wp_enqueue_scripts', 'my_theme_styles', 20);
 // END ENQUEUE PARENT ACTION
 $path = get_template_directory() . '-child/';
 
