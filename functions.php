@@ -14,14 +14,6 @@ if ( !function_exists( 'chld_thm_cfg_locale_css' ) ):
 endif;
 add_filter( 'locale_stylesheet_uri', 'chld_thm_cfg_locale_css' );
 
-add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
-function my_theme_enqueue_styles() {
-    wp_enqueue_style( 'child-style', get_stylesheet_uri(),
-        array( 'parenthandle' ),
-        wp_get_theme()->get('Version') // this only works if you have Version in the style header
-    );
-}
-
 // END ENQUEUE PARENT ACTION
 $path = get_template_directory() . '-child/';
 
