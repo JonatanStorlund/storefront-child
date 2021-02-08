@@ -1180,6 +1180,10 @@ button {
   box-shadow: 3px 3px 5px 0px rgba(51,51,51,1);
 }
 
+.wp-block-button__link:hover {
+  filter: brightness(80%) !important;
+}
+
 #page .added_to_cart .wc-forward,
 a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart,
 #page .product-type-simple a.added_to_cart.wc-forward,
