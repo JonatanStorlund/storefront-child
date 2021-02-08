@@ -60,6 +60,7 @@ label[for="pwgc-redeem-gift-card-number"],
 .woocommerce-shipping-totals.shipping th,
 h1,
 h2,
+#postcode-checker .postcode-checker-msg,
 h3,
 h4,
 h5,
@@ -1269,6 +1270,7 @@ Woocommerce checkout start
   .checkout_pw_gift_card.woocommerce-form-coupon,
   .woocommerce-checkout .woocommerce-info,
   .woocommerce-checkout .woocommerce-error,
+  #postcode-checker,
   .woocommerce-checkout .checkout_coupon.woocommerce-form-coupon,
   .woocommerce-checkout #customer_details .col-2 {
     max-width: 900px;
@@ -1475,6 +1477,30 @@ Woocommerce checkout start
 /*
 Woocommerce checkout end
 */
+
+/* Postcode checker styles */
+
+#postcode-checker {
+  background: var(--green);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#postcode-checker .postcode-checker-msg {
+  background: var(--white);
+  width: 100%;
+  margin: 10px auto;
+  padding: 15px;
+}
+
+#postcode-checker .postcode-checker-msg.msg-we-dont {
+  color: var(--blue);
+}
+
+#postcode-checker .postcode-checker-msg.msg-we-deliver {
+  color: var(--green);
+}
 
 /* Giftcard form styles */
 .woocommerce-form-coupon {

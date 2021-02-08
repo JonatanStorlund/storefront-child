@@ -436,6 +436,7 @@ add_action('woocommerce_checkout_process', function () {
   }
 });
 
+
 add_action( 'woocommerce_before_cart', 'bbloomer_free_shipping_cart_notice' );
 add_action('woocommerce_before_checkout_form', 'bbloomer_free_shipping_cart_notice', 10, 2);
 
@@ -452,6 +453,11 @@ add_action('woocommerce_before_checkout_form', 'bbloomer_free_shipping_cart_noti
       echo '</div>';
    }
   }
+
+add_action( 'woocommerce_checkout_before_customer_details', 'add_postcode_checker', 20 );
+function add_postcode_checker() {
+    echo do_shortcode('[postcode_checker]');
+}
 
   // define the woocommerce_applied_coupon callback
 function update_woocommerce_notice() {
