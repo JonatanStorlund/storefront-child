@@ -414,7 +414,7 @@ function hide_shipping_when_free_is_available( $rates, $package ) {
 	if ( ! empty( $new_rates ) ) {
 		//Save local pickup if it's present.
 		foreach ( $rates as $rate_id => $rate ) {
-			if ('local_pickup' === $rate->method_id ) {
+			if ('wpll-shipping-method' === $rate->method_id ) {
 				$new_rates[ $rate_id ] = $rate;
 				break;
 			}
