@@ -633,6 +633,7 @@ woocommerce-notice start
   }
 
   .woocommerce-info,
+  .woocommerce-error,
   .woocommerce-info .button.wc-forward,
   .woocommerce-message {
     font-size: 14px;
@@ -683,7 +684,7 @@ woocommerce-cart start
 
 .woocommerce-cart #page table th,
 .woocommerce-cart #page table td {
-  padding: 5px 10px;
+  padding: 10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -789,7 +790,7 @@ woocommerce-cart start
 
 .woocommerce-cart .order-total td,
 .woocommerce-cart .cart-discount td {
-  padding: 5px 10px;
+  padding: 10px;
 }
 
 table.shop_table_responsive tr td[data-title]:before {
@@ -820,7 +821,7 @@ table.shop_table_responsive tr td[data-title]:before {
 
 .woocommerce-cart .cart_totals table td:last-child {
   text-align: right;
-  padding: 5px 10px;
+  padding: 10px;
 }
 
 .woocommerce-cart table.cart td.actions label {
@@ -1259,6 +1260,7 @@ Woocommerce checkout start
   .woocommerce-checkout .woocommerce-info,
   .checkout_pw_gift_card.woocommerce-form-coupon,
   .woocommerce-checkout .woocommerce-info,
+  .woocommerce-checkout .woocommerce-error,
   .woocommerce-checkout .checkout_coupon.woocommerce-form-coupon,
   .woocommerce-checkout #customer_details .col-2 {
     max-width: 900px;
@@ -1301,7 +1303,7 @@ Woocommerce checkout start
 
 .woocommerce-checkout td,
 .woocommerce-checkout th {
-  padding: 7px;
+  padding: 15px;
 }
 
 #payment .payment_methods li .payment_box {
@@ -1318,7 +1320,7 @@ Woocommerce checkout start
 }
 
 .woocommerce-message:before {
-  content: '';
+  display: none !important;
 }
 
 .woocommerce-shipping-totals select {
@@ -1342,7 +1344,7 @@ Woocommerce checkout start
 
   .woocommerce-checkout .shop_table td,
   .woocommerce-checkout .shop_table th {
-    padding: 5px;
+    padding: 10px;
   }
 
   .woocommerce-checkout #order_review .woocommerce-shipping-totals {
