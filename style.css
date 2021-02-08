@@ -618,7 +618,13 @@ woocommerce-notice start
 
 .woocommerce-checkout .woocommerce-info .button.wc-forward,
 .woocommerce-cart .woocommerce-info .button.wc-forward {
-  color: var(--blue);
+  background: var(--blue);
+  color: var(--white);
+}
+
+.woocommerce-checkout .woocommerce-info .button.wc-forward:after,
+.woocommerce-cart .woocommerce-info .button.wc-forward:after {
+  padding-right: 10px;
 }
 
 .woocommerce-info,
