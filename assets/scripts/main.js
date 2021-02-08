@@ -115,6 +115,8 @@ jQuery(document).ready(function ($) {
 // Translate strings with javascript
 
 jQuery(document).ready(function ($) {
+  $("[lang='sv-SE'] .woocommerce-billing-fields h3").html('Kontrollera din order, välj leverans- /hämtnings alternativ och fyll i dina uppgifter');
+  $("[lang='fi'] .woocommerce-billing-fields h3").html('Tarkista tilaus, valitse toimitus- /nouto vaihtoehdoista ja täytä tietojasi');
   $("[lang='sv-SE'] button#place_order").html('Slutför köp');
   $("[lang='fi'] button#place_order").html('Osta');
   $("[lang='sv-SE'] .woocommerce-shipping-totals th").html('Välj leverans eller hämtar');
