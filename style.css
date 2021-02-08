@@ -661,10 +661,12 @@ woocommerce-notice start
   .woocommerce-info a {
     margin-left: 5px;
   }
+  .woocommerce-error,
   .woocommerce-info,
   .woocommerce-message {
     border-left: none;
-    padding: 10px;
+    padding: 10px 20%;
+    text-align: center;
     margin-bottom: 10px;
   }
 }
@@ -1319,12 +1321,6 @@ Woocommerce checkout start
   background-color: var(--blue);
 }
 
-.woocommerce-info::before 
-.woocommerce-error::before 
-.woocommerce-message::before {
-  display: none !important;
-}
-
 .woocommerce-shipping-totals select {
   padding: 8px;
   width: 100%;
@@ -1473,3 +1469,13 @@ Woocommerce checkout start
 /*
 Woocommerce checkout end
 */
+
+/* Giftcard form styles */
+.woocommerce-form-coupon {
+  display: flex;
+  flex-direction: column;
+}
+
+.woocommerce-form-coupon p {
+  width: 100%;
+}
