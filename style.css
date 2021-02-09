@@ -42,6 +42,7 @@ body {
 	padding-top: 88px;
 	font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 18px;
+  background: #e9f7ff;
 }
 
 p,
@@ -60,10 +61,12 @@ label[for="pwgc-redeem-gift-card-number"],
 .woocommerce-shipping-totals.shipping th,
 h1,
 h2,
+.woocommerce-checkout .woocommerce-notice,
 #postcode-checker .postcode-checker-msg,
 h3,
 h4,
 h5,
+.form-row label,
 .woocommerce-cart table.cart td.actions label,
 .websites-depot-checkout-review-shipping-table tbody th,
 .swatch,
@@ -82,11 +85,13 @@ h2,
 .widget .widget-title,
 .macro-container__box-title,
 .macro-container__box-macro,
+.woocommerce-checkout .woocommerce-notice,
 .product_title.entry-title {
 	font-size: 32px;
 }
 
 h3,
+.form-row label,
 label[for="pwgc-redeem-gift-card-number"],
 .woocommerce-shipping-totals.shipping th,
 .woocommerce-cart table.cart td.actions label,
@@ -120,11 +125,13 @@ h6 {
 
 	h2,
 	.widget .widget-title,
+  .woocommerce-checkout .woocommerce-notice,
 	.product_title.entry-title {
 		font-size: 28px;
 	}
 
 	h3,
+  .form-row label,
 	label[for="pwgc-redeem-gift-card-number"],
 	.woocommerce-shipping-totals.shipping th,
 	.woocommerce-cart table.cart td.actions label,
@@ -167,6 +174,18 @@ typography end
 /*
 footer start
 */
+
+footer .social-menu {
+  display: flex;
+}
+
+footer .social-menu li:not(:last-child) {
+  margin-right: 15px;
+}
+
+footer .social-menu li a {
+  font-size: 20px;
+}
 
 .footer-widgets {
   display: flex;
@@ -909,6 +928,10 @@ woocommerce-shop start
   display: none;
 }
 
+.woocommerce-page.single-product .product-type-simple .cart {
+  display: block;
+}
+
 .woocommerce-page .product_type_variable.add_to_cart_button {
   display: none;
 }
@@ -1395,7 +1418,7 @@ Woocommerce checkout start
   .woocommerce-checkout .shop_table td,
   .woocommerce-checkout .shop_table th {
     padding: 10px;
-  }
+  } 
 
   .woocommerce-checkout #order_review .woocommerce-shipping-totals {
     display: flex;
