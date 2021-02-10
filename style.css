@@ -191,11 +191,11 @@ footer .social-menu {
   display: flex;
 }
 
-footer a {
+.site-footer a:not(.button):not(.components-button) {
   color: #fff;
 }
 
-footer a::before {
+.site-footer a:not(.button):not(.components-button)::before {
   display: none;
 }
 
