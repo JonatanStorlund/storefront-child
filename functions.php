@@ -586,3 +586,11 @@ add_action( 'woocommerce_review_order_before_payment', 'wc_privacy_message_below
 function wc_privacy_message_below_checkout_button() {
    echo '<h2>' . pll__('Choose payment method', 'sijomealprep') . '</h2>';
 }
+
+function storefront_credit() {
+    ?>
+    <div class="site-info">
+        © SiJo Ab <?php echo Date("Y") ?>
+    </div><!-- .site-info -->
+    <?php
+}
