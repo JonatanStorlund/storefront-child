@@ -199,6 +199,10 @@ footer .social-menu li a {
   font-size: 20px;
 }
 
+footer .social-menu li a svg {
+  fill: var(--white);
+}
+
 .footer-widgets {
   display: flex;
   flex-wrap: wrap;
