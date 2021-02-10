@@ -191,6 +191,14 @@ footer .social-menu {
   display: flex;
 }
 
+footer a {
+  color: #fff;
+}
+
+footer a::before {
+  display: none;
+}
+
 footer .social-menu li:not(:last-child) {
   margin-right: 15px;
 }
