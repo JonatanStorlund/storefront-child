@@ -195,7 +195,7 @@ footer .social-menu {
   color: #fff;
 }
 
-.site-footer a:not(.button):not(.components-button)::before {
+.widget_nav_menu ul li:before {
   display: none;
 }
 
