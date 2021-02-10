@@ -193,6 +193,7 @@ footer .social-menu {
 
 .site-footer a:not(.button):not(.components-button) {
   color: #fff;
+  padding-left: 0;
 }
 
 .widget_nav_menu ul li:before {
