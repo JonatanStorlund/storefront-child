@@ -14,6 +14,7 @@ Updated: 2021-01-20 17:59:00
 :root {
   --green: #399E5A;
   --dark-green: #109c3e;
+  --light-blue: #e9f7ff;
   --blue: #224870;
   --dark-blue: #0f2e4e;
   --white: #E7ECEF;
@@ -780,7 +781,7 @@ woocommerce-cart start
 */
 
 .woocommerce-cart #page table.cart td.actions {
-  background: #ffffff;
+  background: var(--light-blue);
 }
 
 .woocommerce-cart #page table th,
@@ -1579,6 +1580,11 @@ Woocommerce checkout start
 
 #payment .place-order {
   background: transparent;
+}
+
+.woocommerce-checkout .input-text,
+.woocommerce-checkout .input-text:focus {
+  background: #fff;
 }
 
 /*
