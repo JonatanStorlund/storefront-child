@@ -542,6 +542,10 @@ hero end
 wordpress blocks start
 */
 
+.testimonial-slider .carousel-item {
+  height: 270px;
+}
+
 .wp-block-cover.alignfull.no-margin {
   margin-bottom: -125px;
 }
@@ -556,6 +560,7 @@ wordpress blocks start
 }
 
 .wp-block-columns .wp-block-column.column-card {
+  background: #fff;
   box-shadow: 0 4px 8px rgba(0,0,0,0.25), 0 2px 2px rgba(0,0,0,0.22);
   border-radius: 10px;
 }
@@ -856,8 +861,8 @@ woocommerce-cart start
 }
 
 .woocommerce-cart table {
-  background: var(--blue);
-  color: var(--white);
+  background: #fff;
+  color: #000;
 }
 
 .woocommerce-cart table a {
@@ -890,13 +895,8 @@ table.shop_table_responsive tr td[data-title]:before {
 }
 
 .woocommerce-cart .cart_totals table {
-  background: var(--blue);
-  color: var(--white);
-}
-
-.woocommerce-cart .cart_totals table {
-  background: var(--blue);
-  color: var(--white);
+  background: #fff;
+  color: #000;
 }
 
 .woocommerce-cart .cart_totals table td:last-child {
@@ -1041,6 +1041,7 @@ woocommerce-product-card start
 
 /* SHOP PRODUCT CARDS*/
 .woocommerce .products .product {
+  background: #fff;
   box-shadow: 0 4px 8px rgba(0,0,0,0.25), 0 2px 2px rgba(0,0,0,0.22);
   border-radius: 10px;
   padding: 0 8px;
@@ -1531,8 +1532,8 @@ Woocommerce checkout start
 }
 
 .woocommerce-checkout .shop_table.woocommerce-checkout-review-order-table {
-  background: var(--blue);
-  color: var(--white);
+  background: #fff;
+  color: #000;
 }
 
 .woocommerce-checkout #order_review table {
@@ -1551,6 +1552,17 @@ Woocommerce checkout start
 
 #order_review_heading {
   display: none;
+}
+
+#payment .payment_methods>.wc_payment_method label {
+  visibility: hidden;
+  padding: 0;
+  background: transparent;
+  height: 0;
+}
+
+#payment .place-order {
+  background: transparent;
 }
 
 /*

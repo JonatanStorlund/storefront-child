@@ -122,6 +122,7 @@ add_action('init', function() {
 	pll_register_string('sijomealprep', 'Select Size', 'sijomealprep');
 	pll_register_string('sijomealprep', 'Already have an account?', 'sijomealprep');
 	pll_register_string('sijomealprep', 'Sign in', 'sijomealprep');
+	pll_register_string('sijomealprep', 'Choose payment method', 'sijomealprep');
 });
 
 
@@ -579,3 +580,9 @@ function wc_billing_field_strings( $translated_text, $text, $domain ) {
     return $translated_text;
 }
 add_filter( 'gettext', 'wc_billing_field_strings', 20, 3 );
+
+add_action( 'woocommerce_review_order_before_payment', 'wc_privacy_message_below_checkout_button' );
+ 
+function wc_privacy_message_below_checkout_button() {
+   echo '<h2>' . pll__('Choose payment method', 'sijomealprep') . '</h2>';
+}
