@@ -36,7 +36,7 @@ function woa_add_hero_image() {
 					<div>
 						<h1 class="hero-wrapper__left-box-title"><?php echo get_field('hero_title') ?></h1>
 						<?php if(get_field('hero_link')['url']) {?>
-						<button class="hero-wrapper__left-box-button"><?php echo get_field('hero_link')['title'] ?></button>
+						    <a class="button" href="<?php echo get_field('hero_link')['url'] ?>" class="hero-wrapper__left-box-a"><?php echo get_field('hero_link')['title'] ?></a>
 						<?php } ?>
 					</div>
 				</div>
@@ -46,7 +46,7 @@ function woa_add_hero_image() {
         <div class="hero-wrapper section-inner medium mobile alignfull">
             <h1 class="hero-wrapper__left-box-title"><?php echo get_field('hero_title') ?></h1>
             <?php if(get_field('hero_link')['url']) {?>
-            <button class="hero-wrapper__left-box-button"><?php echo get_field('hero_link')['title'] ?></button>
+            <a class="button" href="<?php echo get_field('hero_link')['url'] ?>" class="hero-wrapper__left-box-a"><?php echo get_field('hero_link')['title'] ?></a>
         <?php } ?>
         </div>
 		<?php
