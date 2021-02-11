@@ -669,6 +669,10 @@ editor-colors end
 wp-my-account start
 */
 
+.woocommerce-privacy-policy-text {
+  display: none;
+}
+
 .woocommerce-MyAccount-content .col-2,
 .woocommerce-MyAccount-content .col-1 {
   max-width: unset;
