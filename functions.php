@@ -626,7 +626,7 @@ function kia_display_email_order_meta( $order, $sent_to_admin ) {
     $is_gym365 = strpos($pickup_location, 'Gym') !== false;
 
     if( $is_svenskan || $is_gym365 ) {
-    echo '<strong>' . pll__('Pickup from ', 'sijomealprep') . $pickup_location . '</strong></br></br>';
+    echo '<strong>' . pll__('Pickup from', 'sijomealprep') . ' ' . $pickup_location . '</strong></br></br>';
     }
 }
 add_action('woocommerce_email_order_meta', 'kia_display_email_order_meta', 30, 3 );
