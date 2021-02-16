@@ -513,6 +513,10 @@ hero start
   position: relative;
 }
 
+.hero-wrapper .hero-link:hover {
+  text-decoration: none;
+}
+
 .hero-wrapper .hero-wrapper__left-box {
   position: absolute;
   top: 16.25vh;
