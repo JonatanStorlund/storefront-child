@@ -97,6 +97,8 @@ add_action( 'wp_enqueue_scripts', 'storefront_child_scripts' );
 
 // Woocommerce polylang register strings start //
 add_action('init', function() {
+	pll_register_string(  'sijomealprep',  'Pickup from', 'sijomealprep');
+	pll_register_string(  'sijomealprep',  'Pickup info', 'sijomealprep');
 	pll_register_string(  'sijomealprep',  'Till menyn', 'sijomealprep');
 	pll_register_string(  'sijomealprep',  '<p>Gratis frakt om du köper för ', 'sijomealprep');
 	pll_register_string(  'sijomealprep',  ' mer!</p>', 'sijomealprep');
@@ -571,10 +573,10 @@ add_action( 'woocommerce_after_customer_login_form', function() {
 function wc_billing_field_strings( $translated_text, $text, $domain ) {
     switch ( $translated_text ) {
     case 'Faktureringsadress' :
-    $translated_text = __( 'Leveransadress', 'woocommerce' );
+    $translated_text = __( 'Leverans-/ faktureringsadress', 'woocommerce' );
     break;
     case 'Laskutusosoite' :
-    $translated_text = __( 'Toimitusosoite', 'woocommerce' );
+    $translated_text = __( 'Toimitus-/ laskutusosoite', 'woocommerce' );
     break;
     }
     return $translated_text;
@@ -594,3 +596,54 @@ function storefront_credit() {
     </div><!-- .site-info -->
     <?php
 }
+
+function kia_display_order_data( $order_id ){
+    $order = wc_get_order( $order_id );
+    $pickup_location = $order->get_meta( '_wpll_pickup_lcoation_name' );
+    $is_svenskan = strpos($pickup_location, 'Svenskagården') !== false;
+    $is_gym365 = strpos($pickup_location, 'Gym') !== false;
+
+    if ($is_svenskan || $is_gym365 ) {
+        ?>
+        <h2><?php echo pll__('Pickup info', 'sijomealprep'); ?></h2>
+        <table class="shop_table shop_table_responsive additional_info">
+            <tbody>
+                <tr>
+                    <td style="text-align:left; padding-left: 0"><?php echo pll__('Pickup from', 'sijomealprep'); ?>
+                    <?php echo $order->get_meta( '_wpll_pickup_lcoation_name' ); ?></td>
+                </tr>
+            </tbody>
+        </table>
+    <?php
+    }
+}
+add_action( 'woocommerce_thankyou', 'kia_display_order_data', 20 );
+add_action( 'woocommerce_view_order', 'kia_display_order_data', 20 );
+
+function kia_display_email_order_meta( $order, $sent_to_admin ) {
+    $pickup_location = $order->get_meta( '_wpll_pickup_lcoation_name' );
+    $is_svenskan = strpos($pickup_location, 'Svenskagården') !== false;
+    $is_gym365 = strpos($pickup_location, 'Gym') !== false;
+
+    if( $is_svenskan || $is_gym365 ) {
+    echo '<strong>' . pll__('Pickup from ', 'sijomealprep') . $pickup_location . '</strong></br></br>';
+    }
+}
+add_action('woocommerce_email_order_meta', 'kia_display_email_order_meta', 30, 3 );
+
+function example_custom_order_fields( $fields, $order ) {
+    $new_fields = array();
+    $pickup_location = $order->get_meta( '_wpll_pickup_lcoation_name' );
+    $is_svenskan = strpos($pickup_location, 'Svenskagården') !== false;
+    $is_gym365 = strpos($pickup_location, 'Gym') !== false;
+
+    if( $is_svenskan || $is_gym365 ) {
+        $new_fields['_wpll_pickup_lcoation_name'] = array(
+            'label' => pll__('Pickup from', 'sijomealprep'),
+            'value' => get_post_meta( $order->id, '_wpll_pickup_lcoation_name', true )
+        );
+    }
+
+    return array_merge( $fields, $new_fields );
+}
+add_filter( 'wcdn_order_info_fields', 'example_custom_order_fields', 10, 2 );
