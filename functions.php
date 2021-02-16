@@ -573,10 +573,10 @@ add_action( 'woocommerce_after_customer_login_form', function() {
 function wc_billing_field_strings( $translated_text, $text, $domain ) {
     switch ( $translated_text ) {
     case 'Faktureringsadress' :
-    $translated_text = __( 'Leverans-/ faktureringsadress', 'woocommerce' );
+    $translated_text = __( 'Leverans-/ faktureringsuppgifter', 'woocommerce' );
     break;
     case 'Laskutusosoite' :
-    $translated_text = __( 'Toimitus-/ laskutusosoite', 'woocommerce' );
+    $translated_text = __( 'Toimitus-/ laskutustiedot', 'woocommerce' );
     break;
     }
     return $translated_text;
