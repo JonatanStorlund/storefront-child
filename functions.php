@@ -520,7 +520,7 @@ function local_pickup_fields() {
                 return false;
             }
             $('body').on('updated_checkout', function () {
-            $('.billing-dynamic_pickup').toggleClass('hide_pickup', $('#shipping_method_0 [value="wpll-shipping-method"]').is(':selected'));
+            $('.billing-dynamic_pickup').toggleClass('hide_pickup', $('#shipping_method_0_wpll-shipping-method[value="wpll-shipping-method"]').is(':checked'));
             });
         });
     </script>

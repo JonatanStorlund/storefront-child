@@ -1375,6 +1375,7 @@ Woocommerce checkout start
   .checkout_pw_gift_card.woocommerce-form-coupon,
   .woocommerce-checkout .woocommerce-info,
   .woocommerce-checkout .woocommerce-error,
+  .woocommerce-checkout .woocommerce-message,
   #postcode-checker,
   .woocommerce-checkout .checkout_coupon.woocommerce-form-coupon,
   .woocommerce-checkout #customer_details .col-2 {
