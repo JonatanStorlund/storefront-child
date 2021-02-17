@@ -231,10 +231,6 @@ footer .social-menu li a svg {
   margin-right: 2%;
 }
 
-.site-info {
-  /* display: none; */
-}
-
 @media screen and (max-width: 768px) {
   .footer-widgets block {
     width: 100%;
@@ -672,6 +668,15 @@ editor-colors end
 /*
 wp-my-account start
 */
+
+div.wt-single-coupon {
+  border: 3px solid var(--white);
+}
+
+.wt-single-coupon .wt-coupon-code code {
+  color: var(--black);
+  font-weight: bold;
+}
 
 .woocommerce-privacy-policy-text {
   display: none;

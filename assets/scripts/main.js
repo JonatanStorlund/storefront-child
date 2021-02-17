@@ -115,6 +115,10 @@ jQuery(document).ready(function ($) {
 // Translate strings with javascript
 
 jQuery(document).ready(function ($) {
+  $("[lang='sv-SE'] .wt-mycoupons h4").html('Tillgängliga rabattkoder');
+  $("[lang='fi'] .wt-mycoupons h4").html('Saatavilla alevat alennuskoodit');
+  $("[lang='sv-SE'] .woocommerce-MyAccount-navigation-link--wt-smart-coupon a").html('Mina rabattkoder');
+  $("[lang='fi'] .woocommerce-MyAccount-navigation-link--wt-smart-coupon a").html('Minun alennuskoodit');
   $("[lang='sv-SE'] .woocommerce-billing-fields h3").html('Kontrollera din order, välj leverans- /hämtnings alternativ och fyll i dina uppgifter');
   $("[lang='fi'] .woocommerce-billing-fields h3").html('Tarkista tilaus, valitse toimitus- /nouto vaihtoehdoista ja täytä tietojasi');
   $("[lang='sv-SE'] button#place_order").html('Slutför köp');
