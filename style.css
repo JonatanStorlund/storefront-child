@@ -1233,9 +1233,25 @@ cart_checkout_account start
 }
 
 
+
+
 /*
 cart_checkout_account end
 */
+
+/*
+tawk to start
+*/
+
+.boxzilla-center-container {
+  z-index: 9999999999999 !important;
+}
+
+/*
+tawk to end
+*/
+
+
 /*
 button start
 */
