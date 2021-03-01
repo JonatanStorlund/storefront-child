@@ -999,7 +999,8 @@ woocommerce-shop start
   display: flex;
 }
 
-.tawcvs-swatches .swatch-normal {
+.tawcvs-swatches .swatch-vanlig,
+.tawcvs-swatches .swatch-tavallinen {
   order: -1;
 }
 
