@@ -53,8 +53,9 @@ jQuery(document).ready(function ($) {
   $('.products .large-cal').hide();
   $('.products .large-protein').hide();
   $(".variations_form").on("woocommerce_variation_select_change", function () {
-    let large_selected = $(this).find('.swatch-large').hasClass('selected')
-    if (large_selected) {
+    let stor_selected = $(this).find('.swatch-stor').hasClass('selected')
+    let iso_selected = $(this).find('.swatch-iso').hasClass('selected')
+    if (stor_selected || iso_selected) {
       $(this).parent().find('.small-cal').hide();
       $(this).parent().find('.small-protein').hide();
       $(this).parent().find('.large-cal').show();
@@ -73,14 +74,28 @@ jQuery(document).ready(function ($) {
   $('.single-product .large-cal').hide();
   $('.single-product .large-protein').hide();
 
-  $('.single-product .swatch-normal').click(function () {
+  $('.single-product .swatch-vanlig').click(function () {
     $('.single-product .small-cal').show();
     $('.single-product .small-protein').show();
     $('.single-product .large-cal').hide();
     $('.single-product .large-protein').hide();
   });
 
-  $('.single-product .swatch-large').click(function () {
+  $('.single-product .swatch-stor').click(function () {
+    $('.single-product .small-cal').hide();
+    $('.single-product .small-protein').hide();
+    $('.single-product .large-cal').show();
+    $('.single-product .large-protein').show();
+  });
+
+  $('.single-product .swatch-tavallinen').click(function () {
+    $('.single-product .small-cal').show();
+    $('.single-product .small-protein').show();
+    $('.single-product .large-cal').hide();
+    $('.single-product .large-protein').hide();
+  });
+
+  $('.single-product .swatch-iso').click(function () {
     $('.single-product .small-cal').hide();
     $('.single-product .small-protein').hide();
     $('.single-product .large-cal').show();
