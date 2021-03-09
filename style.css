@@ -12,8 +12,8 @@ Updated: 2021-01-20 17:59:00
 */
 
 :root {
-  --green: #399E5A;
-  --dark-green: #109c3e;
+  --green: #109c3e;
+  --dark-green: #399E5A;
   --light-blue: #e9f7ff;
   --blue: #224870;
   --dark-blue: #0f2e4e;
@@ -520,9 +520,28 @@ hero start
   padding: 0 16px;
 }
 
+.hero-wrapper .hero-offer {
+  border-left: solid 5px var(--white);
+  background: var(--dark-green);
+  padding: 15px;
+  color: var(--white);
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.hero-wrapper .hero-offer h2 {
+  color: var(--white);
+  margin-bottom: 0;
+}
+
+.hero-wrapper .hero-offer-disclaimer {
+  margin-bottom: 0;
+}
+
 .hero-wrapper .hero-wrapper__left-box .hero-wrapper__left-box-title  {
   text-shadow: 2px 2px 1px var(--black);
   color: var(--white);
+  margin-bottom: 10px;
 }
 
 .hero-wrapper.mobile {
@@ -530,6 +549,14 @@ hero start
 }
 
 @media screen and (max-width: 768px) {
+  .hero-wrapper .hero-offer {
+    background: var(--dark-blue);
+  }
+
+  .hero-wrapper .hero-offer h2 {
+    font-size: 22px;
+  }
+
   .hero-wrapper {
     height: 45vh;
   }
@@ -629,6 +656,10 @@ editor-colors start
   background-color: var(--green) !important;
 }
 
+.has-green-background-color:hover {
+  filter: brightness(95%);
+}
+
 .has-blue-color {
   color: var(--blue) !important;
 }
@@ -711,7 +742,7 @@ div.wt-single-coupon {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 
 

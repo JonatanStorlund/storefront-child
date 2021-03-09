@@ -35,9 +35,26 @@ function woa_add_hero_image() {
 				<div class="hero-wrapper__left-box hero-wrapper__box desktop">
 					<div>
 						<h1 class="hero-wrapper__left-box-title"><?php echo get_field('hero_title') ?></h1>
-						<?php if(get_field('hero_link')['url']) {?>
-						    <a class="button" href="<?php echo get_field('hero_link')['url'] ?>" class="hero-wrapper__left-box-a"><?php echo get_field('hero_link')['title'] ?></a>
+
+                        <?php if(get_field('hero_offer')) {?>
+                            <div class="hero-offer is-logged-in">
+                                <h2>
+                                    <?php echo get_field('hero_offer') ?>
+                                </h2>
+                                <p class="hero-offer-disclaimer">
+                                    <?php echo get_field('hero_offer_disclaimer') ?>
+                                </p>
+                            </div>
 						<?php } ?>
+
+                        <div style="display: flex;">
+						<?php if(get_field('hero_link')['url']) {?>
+						    <a style="margin-right: 10px" class="button has-green-background-color" href="<?php echo get_field('hero_link')['url'] ?>" class="hero-wrapper__left-box-a"><?php echo get_field('hero_link')['title'] ?></a>
+						<?php } ?>
+                        <?php if(get_field('hero_link_two')['url']) {?>
+						    <a class="button is-logged-in" href="<?php echo get_field('hero_link_two')['url'] ?>" class="hero-wrapper__left-box-a"><?php echo get_field('hero_link_two')['title'] ?></a>
+						<?php } ?>
+                        </div>
 					</div>
 				</div>
 			</div>
@@ -45,8 +62,21 @@ function woa_add_hero_image() {
 
         <div class="hero-wrapper section-inner medium mobile alignfull">
             <h1 class="hero-wrapper__left-box-title"><?php echo get_field('hero_title') ?></h1>
+            <?php if(get_field('hero_offer')) {?>
+                <div class="hero-offer is-logged-in">
+                    <h2>
+                        <?php echo get_field('hero_offer') ?>
+                    </h2>
+                    <p class="hero-offer-disclaimer">
+                        <?php echo get_field('hero_offer_disclaimer') ?>
+                    </p>
+                </div>
+            <?php } ?>
             <?php if(get_field('hero_link')['url']) {?>
-            <a class="button" href="<?php echo get_field('hero_link')['url'] ?>" class="hero-wrapper__left-box-a"><?php echo get_field('hero_link')['title'] ?></a>
+            <a class="button has-green-background-color" href="<?php echo get_field('hero_link')['url'] ?>" class="hero-wrapper__left-box-a"><?php echo get_field('hero_link')['title'] ?></a>
+        <?php } ?>
+        <?php if(get_field('hero_link_two')['url']) {?>
+            <a class="button is-logged-in" href="<?php echo get_field('hero_link_two')['url'] ?>" class="hero-wrapper__left-box-a"><?php echo get_field('hero_link_two')['title'] ?></a>
         <?php } ?>
         </div>
 		<?php
@@ -584,7 +614,7 @@ function wc_billing_field_strings( $translated_text, $text, $domain ) {
 add_filter( 'gettext', 'wc_billing_field_strings', 20, 3 );
 
 add_action( 'woocommerce_review_order_before_payment', 'wc_privacy_message_below_checkout_button' );
- 
+
 function wc_privacy_message_below_checkout_button() {
    echo '<h2>' . pll__('Choose payment method', 'sijomealprep') . '</h2>';
 }
