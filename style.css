@@ -1031,6 +1031,7 @@ woocommerce-shop start
 }
 
 .tawcvs-swatches .swatch-vanlig,
+.tawcvs-swatches .swatch-normal,
 .tawcvs-swatches .swatch-tavallinen {
   order: -1;
 }

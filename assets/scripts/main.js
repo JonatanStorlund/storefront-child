@@ -55,7 +55,9 @@ jQuery(document).ready(function ($) {
   $(".variations_form").on("woocommerce_variation_select_change", function () {
     let stor_selected = $(this).find('.swatch-stor').hasClass('selected')
     let iso_selected = $(this).find('.swatch-iso').hasClass('selected')
-    if (stor_selected || iso_selected) {
+    let large_selected = $(this).find('.swatch-large').hasClass('selected')
+
+    if (stor_selected || iso_selected || large_selected) {
       $(this).parent().find('.small-cal').hide();
       $(this).parent().find('.small-protein').hide();
       $(this).parent().find('.large-cal').show();
@@ -73,6 +75,20 @@ jQuery(document).ready(function ($) {
 jQuery(document).ready(function ($) {
   $('.single-product .large-cal').hide();
   $('.single-product .large-protein').hide();
+
+  $('.single-product .swatch-normal').click(function () {
+    $('.single-product .small-cal').show();
+    $('.single-product .small-protein').show();
+    $('.single-product .large-cal').hide();
+    $('.single-product .large-protein').hide();
+  });
+
+  $('.single-product .swatch-large').click(function () {
+    $('.single-product .small-cal').hide();
+    $('.single-product .small-protein').hide();
+    $('.single-product .large-cal').show();
+    $('.single-product .large-protein').show();
+  });
 
   $('.single-product .swatch-vanlig').click(function () {
     $('.single-product .small-cal').show();
