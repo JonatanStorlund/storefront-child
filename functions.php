@@ -73,7 +73,7 @@ function woa_add_hero_image() {
                 </div>
             <?php } ?>
             <?php if(get_field('hero_link')['url']) {?>
-            <a class="button has-green-background-color" href="<?php echo get_field('hero_link')['url'] ?>" class="hero-wrapper__left-box-a"><?php echo get_field('hero_link')['title'] ?></a>
+            <a class="button" href="<?php echo get_field('hero_link')['url'] ?>" class="hero-wrapper__left-box-a"><?php echo get_field('hero_link')['title'] ?></a>
         <?php } ?>
         <?php if(get_field('hero_link_two')['url']) {?>
             <a class="button is-logged-in" href="<?php echo get_field('hero_link_two')['url'] ?>" class="hero-wrapper__left-box-a"><?php echo get_field('hero_link_two')['title'] ?></a>
