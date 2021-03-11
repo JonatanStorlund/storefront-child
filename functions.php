@@ -677,3 +677,33 @@ function example_custom_order_fields( $fields, $order ) {
     return array_merge( $fields, $new_fields );
 }
 add_filter( 'wcdn_order_info_fields', 'example_custom_order_fields', 10, 2 );
+
+add_action('wp_enqueue_scripts', 'order_received_enqueue_js_script');
+function order_received_enqueue_js_script() {
+
+    $customer_orders = get_posts( array(
+        'numberposts' => 1, // one order is enough
+        'meta_key'    => '_customer_user',
+        'meta_value'  => get_current_user_id(),
+        'post_type'   => 'shop_order', // WC orders post type
+        'post_status' => 'wc-completed', // Only orders with "completed" status
+        'fields'      => 'ids', // Return Ids "completed"
+    ) );
+
+    $first_order = count($customer_orders) > 0 ? true : false;
+    // Only on order received" (thankyou)
+    if( ! is_wc_endpoint_url('order-received') )
+        return;
+?>
+        <script>
+        let has_bought = <?php echo json_encode($first_order); ?>
+
+        setTimeout(() => {
+            console.log(has_bought)
+            if(!has_bought) {
+                Boxzilla.show('1956');
+            }
+        }, 2000);
+        </script>
+<?php
+}
